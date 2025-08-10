@@ -10,7 +10,7 @@ import {
 } from "react-icons/fi";
 import Link from "next/link";
 
-const footerItems = [
+const footerItems_1 = [
   {
     label: "Home",
     path: "/",
@@ -31,14 +31,16 @@ const footerItems = [
     label: "Resume",
     path: "/resume",
   },
-  {
-    label: "Contact",
-    path: "/contact",
-  },
+];
+
+const footerItems_2 = [
+  { label: "GitHub", to: "https://github.com/aamirhashmi98" },
+  { label: "Linkedin", to: "https://www.linkedin.com/in/aamirhashmi98" },
+  { label: "Contact", to: "/contact" },
 ];
 
 const Footer = () => {
-  const renderedFooterItems = footerItems.map((item) => (
+  const renderedFooterItems_1 = footerItems_1.map((item) => (
     <div key={item.label}>
       <Link href={item.path}>
         <Button variant="link" className="text-secondary cursor-pointer">
@@ -47,12 +49,22 @@ const Footer = () => {
       </Link>
     </div>
   ));
+
+  const renderedFooterItems_2 = footerItems_2.map((item) => (
+    <div key={item.label} className="text-sm">
+      <a href={item.to} target={item.to !== "/contact" ? "_blank" : "_self"}>
+        <Button variant="link" className="text-secondary cursor-pointer">
+          {item.label}
+        </Button>
+      </a>
+    </div>
+  ));
   return (
     <div className="w-full relative h-55 bg-gray-900 text-secondary px-48">
       <div className="pt-12">
-        <div className="flex justify-center gap-5">{renderedFooterItems}</div>
+        <div className="flex justify-center gap-5">{renderedFooterItems_1}</div>
       </div>
-      <div className="flex justify-center gap-6 mt-4">
+      {/* <div className="flex justify-center gap-6 mt-4">
         <motion.a
           href="https://github.com/aamirhashmi98"
           target="_blank"
@@ -89,13 +101,14 @@ const Footer = () => {
             YouTube
           </Button>
         </motion.a>
-      </div>
+      </div> */}
+      <div className="flex justify-center mt-4">{renderedFooterItems_2}</div>
       <div className="mt-4">
         <a
           href="#email:aamirhashmi113@gmail.com"
           className="flex items-center justify-center gap-2"
         >
-          <FiMail className="text-red-200" />
+          <FiMail className="" />
           <span className="font-light text-sm hover:underline">
             aamirhashmi113@gmail.com
           </span>

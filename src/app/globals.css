@@ -126,6 +126,21 @@
   }
 }
 
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.7s ease-out forwards;
+}
+
 .highlight {
   position: relative;
 }
