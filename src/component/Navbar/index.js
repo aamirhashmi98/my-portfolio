@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { LiaLongArrowAltDownSolid } from "react-icons/lia";
-// import { motion } from "motion/react";
+import { motion } from "motion/react";
 
 const navItems = [
   {
@@ -49,15 +49,17 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="">
-        <a
+        <motion.a
           href="https://drive.google.com/file/d/1CHkP1PPpFTktdsGl4CtD9u4MGiZ87-xQ/view?usp=drive_link"
           target="_blank"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
         >
-          <Button className="text-primary text-lg font-normal border-1 hover:bg-gray-100 border-black bg-background cursor-pointer px-8">
+          <Button className="text-primary text-lg font-normal border-1 hover:text-secondary border-black bg-background cursor-pointer px-8">
             Resume
             <LiaLongArrowAltDownSolid className="text-lg font-light hover:bg-foreground" />
           </Button>
-        </a>
+        </motion.a>
       </div>
     </nav>
   );

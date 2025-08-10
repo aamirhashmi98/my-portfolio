@@ -39,7 +39,7 @@ const HeroSection = () => {
     <>
       <div className="h-screen w-full flex flex-col justify-center items-center ">
         <div className="text-center">
-          <h1 className="font-light text-6xl -mt-24">
+          <h1 className="font-light text-6xl -mt-24 animate-slideDown">
             Welcome to my <span className="highlight">Portfolio</span>
           </h1>
           <h2 className="font-light text-5xl mt-8">
