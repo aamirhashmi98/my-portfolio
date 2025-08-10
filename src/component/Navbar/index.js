@@ -3,36 +3,46 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { LiaLongArrowAltDownSolid } from "react-icons/lia";
 import { motion } from "motion/react";
+import { usePathname } from "next/navigation";
 
-const navItems = [
+const navLinks = [
   {
     label: "Home",
-    path: "/",
+    href: "/",
   },
   {
     label: "About me",
-    path: "/about",
+    href: "/about",
   },
   {
     label: "Skills",
-    path: "/skills",
+    href: "/skills",
   },
   {
     label: "My Work",
-    path: "/work",
+    href: "/work",
   },
   {
     label: "Contact me",
-    path: "/contact",
+    href: "/contact",
   },
 ];
 
 const Navbar = () => {
-  const renderedNavItems = navItems.map((item) => (
-    <div key={item.label} className="hover:underline">
-      <Link href={item.path}>{item.label}</Link>
-    </div>
-  ));
+  const pathname = usePathname();
+  const renderedNavLinks = navLinks.map((link) => {
+    const isActive = pathname === link.href;
+    return (
+      <div key={link.label} className="hover:underline">
+        <Link
+          href={link.href}
+          className={`${isActive ? "font-bold" : "bg-background"}`}
+        >
+          {link.label}
+        </Link>
+      </div>
+    );
+  });
 
   return (
     <nav className="w-full h-21 bg-background border-2 flex justify-between items-center px-10 py-4">
@@ -44,7 +54,7 @@ const Navbar = () => {
       <div className="">
         <ul className="">
           <li className="text-lg text-primary flex gap-10 cursor-pointer ">
-            {renderedNavItems}
+            {renderedNavLinks}
           </li>
         </ul>
       </div>

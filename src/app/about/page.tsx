@@ -111,7 +111,7 @@ const About = () => {
       </div>
       <div className="">
         <h4 className="text-2xl mx-48 mb-8 highlight">
-          {profile.experience.title}
+          <span>{profile.experience.title}</span>
         </h4>
         <div className="grid grid-cols-2 gap-4 justify-between mx-48">
           <Card className="w-full">
