@@ -19,8 +19,8 @@ import { SiReactbootstrap } from "react-icons/si";
 import { SiCss3 } from "react-icons/si";
 import { SiGithub } from "react-icons/si";
 import { SiAtlassian } from "react-icons/si";
-
 import { FaHtml5 } from "react-icons/fa";
+import { motion } from "motion/react";
 
 const cards = [
   {
@@ -149,19 +149,22 @@ const cards = [
 const SkillsPage = () => {
   return (
     <>
-      <div className="grid grid-cols-4 gap-8 mx-16 my-24">
+      <div className="grid grid-cols-4 gap-8 mx-16 my-24 ">
         {cards.map((card) => (
-          <Card key={card.id} className="w-full bg-gray-100">
+          <Card
+            key={card.id}
+            className="w-full bg-gray-100 transition-transform duration-300 hover:scale-110 cursor-pointer"
+          >
             <CardHeader className="text-center">
               <span className="flex justify-center">{card.icon}</span>
               <CardTitle className="text-lg text-shadow-md">
                 {card.title}
               </CardTitle>
-              <CardContent className=" text-gray-500 text-sm m-2 p-2">
+              <CardContent className="text-gray-500 text-sm m-2 p-2">
                 {card.description}
               </CardContent>
-              <CardFooter className="flex justify-center">
-                {card.ratings}
+              <CardFooter className="flex justify-center text-md text-gray-500">
+                ratings my self : {card.ratings}
               </CardFooter>
             </CardHeader>
           </Card>
