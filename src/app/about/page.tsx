@@ -114,7 +114,7 @@ const About = () => {
           <span>{profile.experience.title}</span>
         </h4>
         <div className="grid grid-cols-2 gap-4 justify-between mx-48">
-          <Card className="w-full">
+          <Card className="w-full transition-transform duration-300 hover:scale-110 cursor-pointer">
             <CardHeader className="">
               <CardTitle className="text-2xl text-shadow-md">
                 {profile.experience.company[0]}
@@ -130,7 +130,7 @@ const About = () => {
               <p>{profile.experience.duration[0]}</p>
             </CardFooter>
           </Card>
-          <Card className="w-full">
+          <Card className="w-full transition-transform duration-300 hover:scale-110 cursor-pointer">
             <CardHeader className="">
               <CardTitle className="text-2xl text-shadow-md">
                 {profile.experience.company[1]}

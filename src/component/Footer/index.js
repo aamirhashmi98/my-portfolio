@@ -24,8 +24,8 @@ const footerItems_1 = [
     path: "/skills",
   },
   {
-    label: "Projects",
-    path: "/projects",
+    label: "My work",
+    path: "/work",
   },
   {
     label: "Resume",
@@ -34,7 +34,7 @@ const footerItems_1 = [
 ];
 
 const footerItems_2 = [
-  { label: "GitHub", to: "https://github.com/aamirhashmi98" },
+  { label: "Github", to: "https://github.com/aamirhashmi98" },
   { label: "Linkedin", to: "https://www.linkedin.com/in/aamirhashmi98" },
   { label: "Contact", to: "/contact" },
 ];
