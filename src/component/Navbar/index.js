@@ -2,7 +2,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { LiaLongArrowAltDownSolid } from "react-icons/lia";
-import { motion } from "motion/react";
 import { usePathname } from "next/navigation";
 
 const navLinks = [

@@ -138,7 +138,7 @@
 }
 
 .animate-slideDown {
-  animation: slideDown 0.7s ease-out forwards;
+  animation: slideDown 0.9s ease-out forwards;
 }
 
 @keyframes slideLeft {
@@ -153,7 +153,7 @@
 }
 
 .animate-slideLeft {
-  animation: slideLeft 0.7s ease-out forwards;
+  animation: slideLeft 0.9s ease-out forwards;
 }
 
 @keyframes slideRight {
@@ -168,7 +168,7 @@
 }
 
 .animate-slideRight {
-  animation: slideRight 0.7s ease-out forwards;
+  animation: slideRight 0.9s ease-out forwards;
 }
 
 .highlight {

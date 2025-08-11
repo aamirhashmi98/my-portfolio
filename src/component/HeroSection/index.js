@@ -1,17 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
-// import { Typewriter } from "react-simple-typewriter";
-// import { motion } from "motion/react";
-// import { FiGithub, FiLinkedin } from "react-icons/fi";
-// import TypewriterComponent from "typewriter-effect";
-// import React, { useState, useEffect } from "react";
 
-const TypewriterWithBold = ({ text, boldWords, speed = 30 }) => {
+const TypewriterWithBold = ({ text, boldWords, speed = 50 }) => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     if (index < text.length) {
+      // console.log(text.length);
       const timeout = setTimeout(() => setIndex(index + 1), speed);
       return () => clearTimeout(timeout);
     }
@@ -19,6 +15,7 @@ const TypewriterWithBold = ({ text, boldWords, speed = 30 }) => {
 
   const renderWithBold = (displayed) => {
     const parts = displayed.split(new RegExp(`(${boldWords.join("|")})`, "gi"));
+    console.log(parts);
     return parts.map((part, i) =>
       boldWords.some((word) => word.toLowerCase() === part.toLowerCase()) ? (
         <strong key={i}>{part}</strong>
@@ -39,7 +36,7 @@ const HeroSection = () => {
     <>
       <div className="h-screen w-full flex flex-col justify-center items-center ">
         <div className="text-center">
-          <h1 className="font-light text-6xl -mt-24 animate-slideDown">
+          <h1 className="font-light text-6xl animate-slideDown">
             Welcome to my <span className="highlight">Portfolio</span>
           </h1>
           <h2 className="font-light text-5xl mt-8">

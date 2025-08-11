@@ -5,22 +5,22 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { FaReact } from "react-icons/fa";
+
 import { IoTriangleSharp } from "react-icons/io5";
-import { SiRedux } from "react-icons/si";
-import { SiTypescript } from "react-icons/si";
-import { SiJavascript } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa";
-import { SiExpress } from "react-icons/si";
-import { SiMongodb } from "react-icons/si";
-import { SiTailwindcss } from "react-icons/si";
-import { SiBulma } from "react-icons/si";
-import { SiReactbootstrap } from "react-icons/si";
-import { SiCss3 } from "react-icons/si";
-import { SiGithub } from "react-icons/si";
-import { SiAtlassian } from "react-icons/si";
-import { FaHtml5 } from "react-icons/fa";
-import { motion } from "motion/react";
+import { FaReact, FaNodeJs, FaHtml5 } from "react-icons/fa";
+import {
+  SiRedux,
+  SiTypescript,
+  SiJavascript,
+  SiExpress,
+  SiMongodb,
+  SiTailwindcss,
+  SiBulma,
+  SiReactbootstrap,
+  SiCss3,
+  SiGithub,
+  SiAtlassian,
+} from "react-icons/si";
 
 const cards = [
   {
