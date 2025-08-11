@@ -2,16 +2,34 @@
 
 import { useState, useEffect } from "react";
 
-const TypewriterWithBold = ({ text, boldWords, speed = 50 }) => {
+const TypewriterWithBold = ({
+  text,
+  boldWords,
+  speed = 50,
+  storageKey = "hasVisited",
+}) => {
   const [index, setIndex] = useState(0);
+  const [skipAnimation, setSkipAnimation] = useState(false);
 
   useEffect(() => {
-    if (index < text.length) {
+    const visited = sessionStorage.getItem(storageKey);
+
+    if (visited) {
+      setSkipAnimation(true);
+      setIndex(text.length); // Show full text immediately
+    } else {
+      setSkipAnimation(false);
+      sessionStorage.setItem(storageKey, "true");
+    }
+  }, [text, storageKey]);
+
+  useEffect(() => {
+    if (!skipAnimation && index < text.length) {
       // console.log(text.length);
       const timeout = setTimeout(() => setIndex(index + 1), speed);
       return () => clearTimeout(timeout);
     }
-  }, [index, text, speed]);
+  }, [index, text, speed, skipAnimation]);
 
   const renderWithBold = (displayed) => {
     const parts = displayed.split(new RegExp(`(${boldWords.join("|")})`, "gi"));
@@ -25,7 +43,12 @@ const TypewriterWithBold = ({ text, boldWords, speed = 50 }) => {
     );
   };
 
-  return <div>{renderWithBold(text.slice(0, index))}</div>;
+  return (
+    <div>
+      {renderWithBold(text.slice(0, index))}
+      <span className="cursor">_</span>
+    </div>
+  );
 };
 
 const HeroSection = () => {
@@ -56,7 +79,7 @@ const HeroSection = () => {
               "Next.js",
               "OpenAI",
             ]}
-            speed={50}
+            speed={60}
             className="mt-3 px-24"
           ></TypewriterWithBold>
         </div>

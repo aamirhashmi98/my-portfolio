@@ -175,6 +175,21 @@
   position: relative;
 }
 
+.cursor {
+  display: inline-block;
+  margin-left: 0;
+  width: 10px;
+  animation: blink 0.2s step-start infinite;
+  font-weight: 900;
+  color: black;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 .highlight::after {
   display: block;
   content: "";
