@@ -2,6 +2,9 @@
 
 import { useState, useEffect } from "react";
 
+const text =
+  "I am an experienced Front-End Developer with over 2 years of expertise, specializing in JavaScript and its ecosystem, including React and frameworks like Next.js. I am passionate about building modern, user-friendly, and efficient web applications, while staying up to date with the latest technologies and industry trends. Recently, I have been exploring and leveraging AI tools like OpenAI to enhance productivity and bring innovative solutions to my development process.";
+
 const TypewriterWithBold = ({
   text,
   boldWords,
@@ -46,15 +49,12 @@ const TypewriterWithBold = ({
   return (
     <div>
       {renderWithBold(text.slice(0, index))}
-      <span className="cursor">_</span>
+      <span className="cursor">|</span>
     </div>
   );
 };
 
 const HeroSection = () => {
-  const text =
-    "I am an experienced Front-End Developer with over 2 years of expertise, specializing in JavaScript and its ecosystem, including React and frameworks like Next.js. I am passionate about building modern, user-friendly, and efficient web applications, while staying up to date with the latest technologies and industry trends. Recently, I have been exploring and leveraging AI tools like OpenAI to enhance productivity and bring innovative solutions to my development process.";
-
   return (
     <>
       <div className="h-screen w-full flex flex-col justify-center items-center ">
@@ -79,7 +79,7 @@ const HeroSection = () => {
               "Next.js",
               "OpenAI",
             ]}
-            speed={60}
+            speed={50}
             className="mt-3 px-24"
           ></TypewriterWithBold>
         </div>
