@@ -2,16 +2,37 @@
 
 import { useState, useEffect } from "react";
 
-const TypewriterWithBold = ({ text, boldWords, speed = 50 }) => {
+const text =
+  "I am an experienced Front-End Developer with over 2 years of expertise, specializing in JavaScript and its ecosystem, including React and frameworks like Next.js. I am passionate about building modern, user-friendly, and efficient web applications, while staying up to date with the latest technologies and industry trends. Recently, I have been exploring and leveraging AI tools like OpenAI to enhance productivity and bring innovative solutions to my development process.";
+
+const TypewriterWithBold = ({
+  text,
+  boldWords,
+  speed = 50,
+  storageKey = "hasVisited",
+}) => {
   const [index, setIndex] = useState(0);
+  const [skipAnimation, setSkipAnimation] = useState(false);
 
   useEffect(() => {
-    if (index < text.length) {
+    const visited = sessionStorage.getItem(storageKey);
+
+    if (visited) {
+      setSkipAnimation(true);
+      setIndex(text.length); // Show full text immediately
+    } else {
+      setSkipAnimation(false);
+      sessionStorage.setItem(storageKey, "true");
+    }
+  }, [text, storageKey]);
+
+  useEffect(() => {
+    if (!skipAnimation && index < text.length) {
       // console.log(text.length);
       const timeout = setTimeout(() => setIndex(index + 1), speed);
       return () => clearTimeout(timeout);
     }
-  }, [index, text, speed]);
+  }, [index, text, speed, skipAnimation]);
 
   const renderWithBold = (displayed) => {
     const parts = displayed.split(new RegExp(`(${boldWords.join("|")})`, "gi"));
@@ -25,13 +46,15 @@ const TypewriterWithBold = ({ text, boldWords, speed = 50 }) => {
     );
   };
 
-  return <div>{renderWithBold(text.slice(0, index))}</div>;
+  return (
+    <div>
+      {renderWithBold(text.slice(0, index))}
+      <span className="cursor">|</span>
+    </div>
+  );
 };
 
 const HeroSection = () => {
-  const text =
-    "I am an experienced Front-End Developer with over 2 years of expertise, specializing in JavaScript and its ecosystem, including React and frameworks like Next.js. I am passionate about building modern, user-friendly, and efficient web applications, while staying up to date with the latest technologies and industry trends. Recently, I have been exploring and leveraging AI tools like OpenAI to enhance productivity and bring innovative solutions to my development process.";
-
   return (
     <>
       <div className="h-screen w-full flex flex-col justify-center items-center ">

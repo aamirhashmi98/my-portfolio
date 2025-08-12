@@ -76,7 +76,7 @@ const About = () => {
   return (
     <>
       <div className="flex p-2 m-4">
-        <div className="flex w-100 h-100 bg-gray-200 p-2 m-2 items-center justify-center rounded-full">
+        <div className="flex w-100 h-100 bg-gray-100 p-2 m-2 items-center justify-center rounded-full">
           image
         </div>
         <div className="w-2/3 h-[400px] m-4 p-4">
