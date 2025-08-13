@@ -59,13 +59,16 @@ const HeroSection = () => {
     <>
       <div className="h-screen w-full flex flex-col justify-center items-center ">
         <div className="text-center">
-          <h1 className="font-light text-6xl animate-slideDown">
+          <h1
+            className="text-6xl  animate-slideDown"
+            style={{ fontWeight: "lighter" }}
+          >
             Welcome to my <span className="highlight">Portfolio</span>
           </h1>
-          <h2 className="font-light text-5xl mt-8">
+          <h2 className="font-light text-5xl mt-12">
             Hi, I am <span className="font-semibold"> Aamir Hashmi</span>
           </h2>
-          <h3 className="text-3xl font-semibold mt-8">Frontend Developer</h3>
+          <h3 className="text-3xl font-semibold mt-12">Frontend Developer</h3>
         </div>
         <div className="flex justify-center max-w-4xl mb-4 mt-4 text-lg text-center min-h-[200px]">
           <TypewriterWithBold

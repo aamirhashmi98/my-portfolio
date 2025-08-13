@@ -17,6 +17,9 @@ import {
 } from "@/components/ui/card";
 
 import { motion } from "motion/react";
+import Image from "next/image";
+import Tilt from "react-parallax-tilt";
+import myImage from "../../../assets/profile-image-croped.png";
 
 const profile = {
   about: {
@@ -76,8 +79,21 @@ const About = () => {
   return (
     <>
       <div className="flex p-2 m-4">
-        <div className="flex w-100 h-100 bg-gray-100 p-2 m-2 items-center justify-center rounded-full">
-          image
+        <div className="flex justify-center">
+          <Tilt
+            tiltMaxAngleX={20}
+            tiltMaxAngleY={20}
+            perspective={1000}
+            scale={1.02}
+            transitionSpeed={1000}
+            gyroscope={true}
+          >
+            <Image
+              src={myImage}
+              alt="my-image"
+              className="w-100 h-100 rounded-full object-cover drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] m-0 p-0"
+            />
+          </Tilt>
         </div>
         <div className="w-2/3 h-[400px] m-4 p-4">
           <h1 className="text-4xl font-bold p-4 animate-slideDown">
