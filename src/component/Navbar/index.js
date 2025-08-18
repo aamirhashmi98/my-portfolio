@@ -1,8 +1,10 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { LiaLongArrowAltDownSolid } from "react-icons/lia";
 import { usePathname } from "next/navigation";
+import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
+import { useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
 
 const navLinks = [
   {
@@ -27,6 +29,14 @@ const navLinks = [
   },
 ];
 
+const socialLinks = [
+  { icon: <IoLogoGithub />, href: "https://github.com/aamirhashmi98" },
+  {
+    icon: <IoLogoLinkedin />,
+    href: "https://www.linkedin.com/in/aamirhashmi98",
+  },
+];
+
 const Navbar = () => {
   const pathname = usePathname();
   const renderedNavLinks = navLinks.map((link) => {
@@ -34,7 +44,7 @@ const Navbar = () => {
     return (
       <div key={link.label} className="hover:underline">
         <Link
-          href={link.href}
+          href={link.href}              
           className={`${isActive ? "font-bold" : "bg-background"}`}
         >
           {link.label}
@@ -43,32 +53,60 @@ const Navbar = () => {
     );
   });
 
+  const renderedSocialLink = socialLinks.map((link) => (
+    <a key={link.href} href={link.href} target="_blank">
+      <div>{link.icon}</div>
+    </a>
+  ));
+
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className="w-full h-21 bg-background border-2 flex justify-between items-center px-10 py-4">
-      <div className="flex">
-        <span className="text-3xl font-normal bg-background border-none shadow-none hover:bg-background cursor-pointer text-primary px-6 py-2">
-          Aamir😎
-        </span>
-      </div>
-      <div className="">
-        <ul className="">
-          <li className="text-lg text-primary flex gap-10 cursor-pointer ">
-            {renderedNavLinks}
-          </li>
-        </ul>
-      </div>
-      <div className="">
-        <a
-          href="https://drive.google.com/file/d/1CHkP1PPpFTktdsGl4CtD9u4MGiZ87-xQ/view?usp=drive_link"
-          target="_blank"
-        >
-          <Button className="text-primary text-lg font-normal border-1 hover:text-secondary border-black bg-background cursor-pointer px-8">
-            Resume
-            <LiaLongArrowAltDownSolid className="text-lg font-light hover:bg-foreground" />
+    <>
+      {/* Main Navbar */}
+      <nav className="flex items-center justify-between w-full h-20 px-4 sm:px-12 border-b bg-white">
+        {/* Left - Mobile Menu Icon */}
+        <div className="flex items-center sm:hidden">
+          <Button
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle Menu"
+            className="text-3xl"
+          >
+            {isOpen ? <FiX /> : <FiMenu />}
           </Button>
-        </a>
-      </div>
-    </nav>
+        </div>
+
+        {/* Center - Logo */}
+        <div className="flex items-center justify-center">
+          <span className="flex items-center gap-1 text-2xl sm:text-3xl font-bold">
+            Aamir <span>😎</span>
+          </span>
+        </div>
+
+        {/* Right - Desktop Nav Links */}
+        <div className="hidden sm:flex items-center">
+          <ul>
+            <li>
+              <span className="flex gap-5 text-lg md:text-xl">
+                {renderedNavLinks}
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        {/* Social Links - Always visible */}
+        <div className="flex items-center gap-4 text-2xl sm:text-3xl">
+          {renderedSocialLink}
+        </div>
+      </nav>
+
+      {/* Mobile Dropdown Menu */}
+      {isOpen && (
+        <div className="sm:hidden bg-white border-t px-4 py-4">
+          <ul className="flex flex-col gap-4 text-lg">{renderedNavLinks}</ul>
+        </div>
+      )}
+    </>
   );
 };
 

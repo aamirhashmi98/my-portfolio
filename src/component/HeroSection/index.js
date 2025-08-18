@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+// import { FiMenu } from "react-icons/fi";
 
 const text =
   "I am an experienced Front-End Developer with over 2 years of expertise, specializing in JavaScript and its ecosystem, including React and frameworks like Next.js. I am passionate about building modern, user-friendly, and efficient web applications, while staying up to date with the latest technologies and industry trends. Recently, I have been exploring and leveraging AI tools like OpenAI to enhance productivity and bring innovative solutions to my development process.";
@@ -19,7 +20,7 @@ const TypewriterWithBold = ({
 
     if (visited) {
       setSkipAnimation(true);
-      setIndex(text.length); // Show full text immediately
+      setIndex(text.length);
     } else {
       setSkipAnimation(false);
       sessionStorage.setItem(storageKey, "true");
@@ -28,7 +29,6 @@ const TypewriterWithBold = ({
 
   useEffect(() => {
     if (!skipAnimation && index < text.length) {
-      // console.log(text.length);
       const timeout = setTimeout(() => setIndex(index + 1), speed);
       return () => clearTimeout(timeout);
     }
@@ -36,7 +36,6 @@ const TypewriterWithBold = ({
 
   const renderWithBold = (displayed) => {
     const parts = displayed.split(new RegExp(`(${boldWords.join("|")})`, "gi"));
-    console.log(parts);
     return parts.map((part, i) =>
       boldWords.some((word) => word.toLowerCase() === part.toLowerCase()) ? (
         <strong key={i}>{part}</strong>
@@ -47,7 +46,7 @@ const TypewriterWithBold = ({
   };
 
   return (
-    <div>
+    <div className="px-4 sm:px-8 md:px-12">
       {renderWithBold(text.slice(0, index))}
       <span className="cursor">|</span>
     </div>
@@ -56,38 +55,40 @@ const TypewriterWithBold = ({
 
 const HeroSection = () => {
   return (
-    <>
-      <div className="h-screen w-full flex flex-col justify-center items-center ">
-        <div className="text-center">
-          <h1
-            className="text-6xl  animate-slideDown"
-            style={{ fontWeight: "lighter" }}
-          >
-            Welcome to my <span className="highlight">Portfolio</span>
-          </h1>
-          <h2 className="font-light text-5xl mt-12">
-            Hi, I am <span className="font-semibold"> Aamir Hashmi</span>
-          </h2>
-          <h3 className="text-3xl font-semibold mt-12">Frontend Developer</h3>
-        </div>
-        <div className="flex justify-center max-w-4xl mb-4 mt-4 text-lg text-center min-h-[200px]">
-          <TypewriterWithBold
-            text={text}
-            boldWords={[
-              "experienced",
-              "2",
-              "years",
-              "JavaScript",
-              "React",
-              "Next.js",
-              "OpenAI",
-            ]}
-            speed={50}
-            className="mt-3 px-24"
-          ></TypewriterWithBold>
-        </div>
+    <section className="min-h-[calc(100vh-80px)] w-full flex flex-col justify-center items-center text-center px-4 sm:px-8">
+      {/* Headings */}
+      <div className="space-y-6">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl animate-slideDown font-light">
+          Welcome to my{" "}
+          <span className="highlight font-semibold">Portfolio</span>
+        </h1>
+
+        <h2 className="font-light text-2xl sm:text-3xl md:text-4xl mt-4 sm:mt-6">
+          Hi, I am <span className="font-semibold">Aamir Hashmi</span>
+        </h2>
+
+        <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mt-4 sm:mt-6">
+          Frontend Developer
+        </h3>
       </div>
-    </>
+
+      {/* Typewriter Text */}
+      <div className="flex justify-center max-w-4xl w-full mt-6 sm:mt-8 text-base sm:text-lg md:text-xl min-h-[150px]">
+        <TypewriterWithBold
+          text={text}
+          boldWords={[
+            "experienced",
+            "2",
+            "years",
+            "JavaScript",
+            "React",
+            "Next.js",
+            "OpenAI",
+          ]}
+          speed={40}
+        />
+      </div>
+    </section>
   );
 };
 
