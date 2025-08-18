@@ -1,7 +1,11 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 // import { FiMenu } from "react-icons/fi";
+import { FiDownload } from "react-icons/fi";
+
 
 const text =
   "I am an experienced Front-End Developer with over 2 years of expertise, specializing in JavaScript and its ecosystem, including React and frameworks like Next.js. I am passionate about building modern, user-friendly, and efficient web applications, while staying up to date with the latest technologies and industry trends. Recently, I have been exploring and leveraging AI tools like OpenAI to enhance productivity and bring innovative solutions to my development process.";
@@ -88,6 +92,7 @@ const HeroSection = () => {
           speed={40}
         />
       </div>
+      <div className="mt-16"><Link href={'https://drive.google.com/file/d/1CHkP1PPpFTktdsGl4CtD9u4MGiZ87-xQ/view?usp=drive_link'} target="_blank"><Button variant={'link'} className="text-sm text-white bg-black md:text-lg px-8 py-6">Download Resume <FiDownload className="md:text-xl"/></Button></Link></div>
     </section>
   );
 };
