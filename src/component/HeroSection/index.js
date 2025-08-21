@@ -92,7 +92,17 @@ const HeroSection = () => {
           speed={40}
         />
       </div>
-      <div className="mt-16"><Link href={'https://drive.google.com/file/d/1CHkP1PPpFTktdsGl4CtD9u4MGiZ87-xQ/view?usp=drive_link'} target="_blank"><Button variant={'link'} className="text-sm text-white bg-black md:text-lg px-8 py-6">Download Resume <FiDownload className="md:text-xl"/></Button></Link></div>
+       <div className="mt-16">
+      <Link
+        href="https://drive.google.com/file/d/1CHkP1PPpFTktdsGl4CtD9u4MGiZ87-xQ/view?usp=drive_link"
+        target="_blank"
+        rel="noopener noreferrer" // SECURITY best practice
+      >
+        <span className="inline-flex items-center text-sm text-white bg-black md:text-lg px-5 py-3 rounded-sm cursor-pointer transition-transform duration-300 hover:scale-105">
+          Download Resume <FiDownload className="md:text-xl ml-2" />
+        </span>
+      </Link>
+    </div>
     </section>
   );
 };

@@ -45,7 +45,7 @@ const Navbar = () => {
       <div key={link.label} className="hover:underline">
         <Link
           href={link.href}              
-          className={`${isActive ? "font-bold" : "bg-background"}`}
+          className={`${isActive ? "font-bold" : ""}`}
         >
           {link.label}
         </Link>
@@ -102,7 +102,7 @@ const Navbar = () => {
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <div className="sm:hidden bg-white border-t px-4 py-4">
+        <div className="sm:hidden bg-background border-t px-4 py-4">
           <ul className="flex flex-col gap-4 text-lg">{renderedNavLinks}</ul>
         </div>
       )}

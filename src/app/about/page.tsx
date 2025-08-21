@@ -61,7 +61,7 @@ const About = () => {
             tiltMaxAngleX={20}
             tiltMaxAngleY={20}
             perspective={1000}
-            scale={1.04}
+            scale={1.05}
             transitionSpeed={1000}
             gyroscope={true}
           >
