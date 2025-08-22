@@ -1,15 +1,16 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-// import { FiMenu } from "react-icons/fi";
 import { FiDownload } from "react-icons/fi";
+// import Typewriter from 'typewriter-effect';
 
 
 const text =
   "I am an experienced Front-End Developer with over 2 years of expertise, specializing in JavaScript and its ecosystem, including React and frameworks like Next.js. I am passionate about building modern, user-friendly, and efficient web applications, while staying up to date with the latest technologies and industry trends. Recently, I have been exploring and leveraging AI tools like OpenAI to enhance productivity and bring innovative solutions to my development process.";
 
+
+  // const words = ['Coder','Fronten Developer']
 const TypewriterWithBold = ({
   text,
   boldWords,
@@ -73,6 +74,14 @@ const HeroSection = () => {
 
         <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mt-4 sm:mt-6">
           Frontend Developer
+          {/* <Typewriter
+                speed="fast"
+                variance={0.8}
+                backspace="word"
+                cursorBlinkSpeed={2}
+              >
+                {`Coder`}
+          </Typewriter> */}
         </h3>
       </div>
 
@@ -99,7 +108,7 @@ const HeroSection = () => {
         rel="noopener noreferrer" // SECURITY best practice
       >
         <span className="inline-flex items-center text-sm text-white bg-black md:text-lg px-5 py-3 rounded-sm cursor-pointer transition-transform duration-300 hover:scale-105">
-          Download Resume <FiDownload className="md:text-xl ml-2" />
+          Download Resume<FiDownload className="md:text-xl ml-2" />
         </span>
       </Link>
     </div>

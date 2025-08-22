@@ -4,28 +4,7 @@ import {
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
-
-import { SiGmail } from "react-icons/si";
-import { FaPhoneAlt } from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
-
-const contactInfo = [
-  {
-    medium: "phone",
-    icon: <FaPhoneAlt className="text-6xl" />,
-    data: "+91-8587893201",
-  },
-  {
-    medium: "mail",
-    icon: <SiGmail className="text-6xl" />,
-    data: "aamirhashmi113@gmail.com",
-  },
-  {
-    medium: "location",
-    icon: <FaLocationDot className="text-6xl" />,
-    data: "Faridabad, Haryana",
-  },
-];
+import { contactInfo } from "../../data/static";
 
 const renderedContactInfo = contactInfo.map((contact) => (
   <Card

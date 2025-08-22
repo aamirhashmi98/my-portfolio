@@ -11,39 +11,7 @@ import {
 import Image from "next/image";
 import Tilt from "react-parallax-tilt";
 import myImage from "../../../assets/profile-image-croped.png";
-
-const profile = {
-  about: {
-    title: "About me",
-    name: "Aamir Hashmi",
-    designation: "Frontend Developer",
-    description: `Hi, I am a web developer passionate about creating modern, responsive, and interactive user interfaces. With hands-on experience in React, Next.js, TypeScript, Tailwind CSS, and modern animation libraries like Framer Motion and Typewriter, I build clean, scalable, and visually appealing web projects. I am constantly learning new techniques, exploring design systems, and working on personal and collaborative projects. Currently, I am building my own portfolio and open to exciting opportunities and collaborations!`,
-  },
-  experience: {
-    title: "Experience",
-    list: [
-      {
-        company: "Magic EdTech",
-        designation: "Frontend Developer",
-        description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nisi non quis, minus velit in? Aut at dolorem voluptatum excepturi quas nulla architecto mollitia aperiam obcaecati possimus.`,
-        duration: "Jun, 2022 - Dec, 2024",
-      },
-      {
-        company: "Elymer",
-        designation: "Junior Software Engineer",
-        description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nisi non quis, minus velit in? Aut at dolorem voluptatum excepturi quas nulla architecto mollitia aperiam obcaecati possimus.`,
-        duration: "Apr, 2021 - Jun, 2022",
-      },
-    ],
-  },
-  education: {
-    title: "Education",
-    college: "GJUS&T",
-    discipline: "B.Tech",
-    course: "Electronics & Communication Engineering",
-    duration: "Aug, 2016 - Aug, 2020",
-  },
-};
+import { profile } from "../../data/static";
 
 const About = () => {
   const { about, education, experience } = profile;
@@ -95,9 +63,14 @@ const About = () => {
         </h4>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {experience.list.map((item, idx) => (
-            <Card key={idx} className="shadow-2xl md:transition-transform md:duration-300 md:hover:scale-105 w-full">
+            <Card
+              key={idx}
+              className="shadow-2xl md:transition-transform md:duration-300 md:hover:scale-105 w-full"
+            >
               <CardHeader>
-                <CardTitle className="text-xl sm:text-2xl  text-shadow-md">{item.company}</CardTitle>
+                <CardTitle className="text-xl sm:text-2xl  text-shadow-md">
+                  {item.company}
+                </CardTitle>
                 <CardDescription className="text-base text-gray-500  text-shadow-md">
                   {item.designation}
                 </CardDescription>
@@ -108,7 +81,9 @@ const About = () => {
                 </p>
               </CardContent>
               <CardFooter>
-                <p className="text-sm text-gray-500 text-shadow-s">{item.duration}</p>
+                <p className="text-sm text-gray-500 text-shadow-s">
+                  {item.duration}
+                </p>
               </CardFooter>
             </Card>
           ))}

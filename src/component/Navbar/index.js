@@ -64,7 +64,7 @@ const Navbar = () => {
   return (
     <>
       {/* Main Navbar */}
-      <nav className="flex items-center justify-between w-full h-20 px-4 sm:px-12 border-b bg-white overflow-x-hidden">
+      <nav className="flex items-center justify-between w-full h-20 px-4 sm:px-12 border-b-2 bg-white overflow-x-hidden">
         {/* Left - Mobile Menu Icon */}
         <div className="flex items-center sm:hidden">
           <Button
