@@ -107,7 +107,7 @@ const HeroSection = () => {
         target="_blank"
         rel="noopener noreferrer" // SECURITY best practice
       >
-        <span className="inline-flex items-center text-sm text-white bg-black md:text-lg px-5 py-3 rounded-sm cursor-pointer transition-transform duration-300 hover:scale-105">
+        <span className="inline-flex items-center text-sm text-white bg-black md:text-lg px-5 py-3 rounded-sm cursor-pointer transition-transform duration-300 hover:bg-gray-800 drop-shadow-[0_10px_20px_rgba(0,0,0,0.9)]">
           Download Resume<FiDownload className="md:text-xl ml-2" />
         </span>
       </Link>

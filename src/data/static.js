@@ -83,10 +83,10 @@ import {
 export const skills = [
   {
     title: "Frontend",
-    id: "sdog",
+    id: "frontend",
     items: [
       {
-        id: "ioegjr",
+        id: "html",
         name: "HTML",
         icon: <FaHtml5 className="text-2xl" />,
         href: "/skills/html",
@@ -95,8 +95,8 @@ export const skills = [
         ratings: "⭐⭐⭐⭐",
       },
       {
-        id: "eoijg",
-        name: "CSS 3",
+        id: "css",
+        name: "CSS3",
         href: "/skills/css",
         icon: <SiCss3 className="text-2xl" />,
         description:
@@ -104,7 +104,7 @@ export const skills = [
         ratings: "⭐⭐⭐⭐",
       },
       {
-        id: "sinvkx",
+        id: "javascript",
         name: "JavaScript",
         icon: <SiJavascript className="text-2xl" />,
         href: "/skills/javascript",
@@ -113,7 +113,7 @@ export const skills = [
         ratings: "⭐⭐⭐⭐",
       },
       {
-        id: "asinnv",
+        id: "react",
         name: "React",
         icon: <FaReact className="text-2xl" />,
         href: "/skills/react",
@@ -122,7 +122,7 @@ export const skills = [
         ratings: "⭐⭐⭐⭐",
       },
       {
-        id: "ognoeig",
+        id: "redux",
         name: "Redux",
         icon: <SiRedux className="text-2xl" />,
         href: "/skills/redux",
@@ -131,7 +131,7 @@ export const skills = [
         ratings: "⭐⭐⭐⭐",
       },
       {
-        id: "osdojog",
+        id: "next.js",
         name: "Next.js",
         icon: <IoTriangleSharp className="text-2xl" />,
         href: "/skills/next.js",
@@ -140,7 +140,7 @@ export const skills = [
         ratings: "⭐⭐⭐⭐",
       },
       {
-        id: "dopgj",
+        id: "tailwindcss",
         name: "Tailwindcss",
         icon: <SiTailwindcss className="text-2xl" />,
         href: "/skills/tailwindcss",
@@ -149,7 +149,7 @@ export const skills = [
         ratings: "⭐⭐⭐⭐",
       },
       {
-        id: "diggn",
+        id: "bootstrap",
         name: "Bootstrap",
         icon: <SiReactbootstrap className="text-2xl" />,
         href: "/skills/bootstrap",
@@ -157,7 +157,7 @@ export const skills = [
         ratings: "⭐⭐⭐⭐",
       },
       {
-        id: "eoroijh",
+        id: "bulmacss",
         name: "Bulmacss",
         icon: <SiBulma className="text-2xl" />,
         href: "/skills/bulmacss",
@@ -166,7 +166,7 @@ export const skills = [
         ratings: "⭐⭐⭐",
       },
       {
-        id: "apojf",
+        id: "materialui",
         name: "Materialui",
         icon: <SiMui className="text-2xl" />,
         href: "/skills/materialui",
@@ -176,11 +176,83 @@ export const skills = [
     ],
   },
   {
-    title: "Backend",
-    id: "eojgpo",
+    title: "Tools",
+    id: "tools",
     items: [
       {
-        id: "spogj",
+        id: "git",
+        name: "Git",
+        icon: <FaGitAlt className="text-2xl" />,
+        href: "/skills/git",
+        description: "",
+        ratings: "⭐⭐⭐⭐",
+      },
+      {
+        id: "github",
+        name: "GitHub",
+        icon: <SiGithub className="text-2xl" />,
+        href: "/skills/github",
+        description:
+          "GitHub is a leading platform for version control and collaboration, enabling developers to host, review, and manage code projects efficiently using Git.",
+        ratings: "⭐⭐⭐⭐",
+      },
+      {
+        id: "postman",
+        name: "Postman",
+        icon: <SiPostman className="text-2xl" />,
+        href: "/skills/postman",
+        description: "",
+        ratings: "⭐⭐⭐⭐",
+      },
+      {
+        id: "vscode",
+        name: "VsCode",
+        icon: <VscVscode className="text-2xl" />,
+        href: "/skills/vscode",
+        description: "",
+        ratings: "⭐⭐⭐",
+      },
+      {
+        id: "netlify",
+        name: "Netlify",
+        icon: <SiNetlify className="text-2xl" />,
+        href: "/skills/netlify",
+        description: "",
+        ratings: "⭐⭐⭐",
+      },
+      {
+        id: "figma",
+        name: "Figma",
+        icon: <SiFigma className="text-2xl" />,
+        href: "/skills/figma",
+        description: "",
+        ratings: "⭐⭐⭐",
+      },
+      {
+        id: "vercel",
+        name: "Vercel",
+        icon: <SiVercel className="text-2xl" />,
+        href: "/skills/vercel",
+        description: "",
+        ratings: "⭐⭐⭐",
+      },
+      {
+        id: "jira",
+        name: "Jira",
+        icon: <SiAtlassian className="text-2xl" />,
+        href: "/skills/jira",
+        description:
+          "A popular tool used by teams to organize tasks, track progress, and collaborate seamlessly during software development and project management.",
+        ratings: "⭐⭐⭐",
+      },
+    ],
+  },
+  {
+    title: "Backend",
+    id: "backend",
+    items: [
+      {
+        id: "node.js",
         name: "Node.js",
         icon: <FaNodeJs className="text-2xl" />,
         href: "/skills/node.js",
@@ -189,7 +261,7 @@ export const skills = [
         ratings: "⭐⭐",
       },
       {
-        id: "ingsf",
+        id: "express.js",
         name: "Express.js",
         icon: <SiExpress className="text-2xl" />,
         href: "/skills/express.js",
@@ -198,7 +270,7 @@ export const skills = [
         ratings: "⭐⭐",
       },
       {
-        id: "weoiga",
+        id: "mongodb",
         name: "MongoDB",
         icon: <SiMongodb className="text-2xl" />,
         href: "/skills/mongodb",
@@ -210,10 +282,10 @@ export const skills = [
   },
   {
     title: "Languages",
-    id: "woeoja",
+    id: "languages",
     items: [
       {
-        id: "spozlmv",
+        id: "c",
         name: "C",
         icon: <SiC className="text-2xl" />,
         href: "/skills/c",
@@ -222,16 +294,16 @@ export const skills = [
         ratings: "⭐⭐⭐⭐",
       },
       {
-        id: "sinvkx",
+        id: "js",
         name: "JavaScript",
         icon: <SiJavascript className="text-2xl" />,
-        href: "/skills/javascript",
+        href: "/skills/js",
         description:
           "A dynamic scripting language that enables interactive, user-friendly websites and applications, widely used for both frontend and backend development.",
         ratings: "⭐⭐⭐⭐",
       },
       {
-        id: "spopong",
+        id: "typescript",
         name: "TypeScript",
         icon: <SiTypescript className="text-2xl" />,
         href: "/skills/typescript",
@@ -241,7 +313,7 @@ export const skills = [
         ratings: "⭐⭐⭐⭐",
       },
       {
-        id: "sxlknvk",
+        id: "python",
         name: "Python",
         icon: <SiPython className="text-2xl" />,
         href: "/skills/python",
@@ -251,78 +323,7 @@ export const skills = [
       },
     ],
   },
-  {
-    title: "Tools",
-    id: "soijg",
-    items: [
-      {
-        id: "mxvjkds",
-        name: "Git",
-        icon: <FaGitAlt className="text-2xl" />,
-        href: "/skills/git",
-        description: "",
-        ratings: "⭐⭐⭐⭐",
-      },
-      {
-        id: "mxvjk",
-        name: "GitHub",
-        icon: <SiGithub className="text-2xl" />,
-        href: "/skills/github",
-        description:
-          "GitHub is a leading platform for version control and collaboration, enabling developers to host, review, and manage code projects efficiently using Git.",
-        ratings: "⭐⭐⭐⭐",
-      },
-      {
-        id: "mzlkhf",
-        name: "Postman",
-        icon: <SiPostman className="text-2xl" />,
-        href: "/skills/postman",
-        description: "",
-        ratings: "⭐⭐⭐⭐",
-      },
-      {
-        id: "zxxcsd",
-        name: "VsCode",
-        icon: <VscVscode className="text-2xl" />,
-        href: "/skills/vscode",
-        description: "",
-        ratings: "⭐⭐⭐",
-      },
-      {
-        id: "asgxclkn",
-        name: "Netlify",
-        icon: <SiNetlify className="text-2xl" />,
-        href: "/skills/netlify",
-        description: "",
-        ratings: "⭐⭐⭐",
-      },
-      {
-        id: "azkngsdg",
-        name: "Figma",
-        icon: <SiFigma className="text-2xl" />,
-        href: "/skills/figma",
-        description: "",
-        ratings: "⭐⭐⭐",
-      },
-      {
-        id: "assdkngio",
-        name: "Vercel",
-        icon: <SiVercel className="text-2xl" />,
-        href: "/skills/vercel",
-        description: "",
-        ratings: "⭐⭐⭐",
-      },
-      {
-        id: "asgazc",
-        name: "Jira",
-        icon: <SiAtlassian className="text-2xl" />,
-        href: "/skills/jira",
-        description:
-          "A popular tool used by teams to organize tasks, track progress, and collaborate seamlessly during software development and project management.",
-        ratings: "⭐⭐⭐",
-      },
-    ],
-  },
+  
 ];
 
 //-----------------PROJECTS-DATA-----------------------------
