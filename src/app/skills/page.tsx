@@ -1,14 +1,19 @@
+"use client";
 import Link from "next/link";
 import { skills } from "../../data/static";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+
 const skillsPage = () => {
   return (
     <>
-      <section id="skills" className="grid grid-cols-2 gap-5 px-42 py-18">
+      <section
+        id="skills"
+        className="grid grid-cols-1 md:grid-cols-2 gap-5 px-42 py-18"
+      >
         {skills.map((category) => (
           <Card key={category.id} className="w-full h-full border-2 px-6 py-4">
             {/* Category Title */}
-            <CardHeader className="text-2xl font-semibold text-center">
+            <CardHeader className="text-xl md:text-2xl font-semibold text-center">
               {category.title}
             </CardHeader>
 
@@ -20,7 +25,8 @@ const skillsPage = () => {
                   href={item.href}
                   className="flex border-2 rounded-2xl justify-center items-center text-center gap-2 px-3 py-3 hover:bg-gray-100 transition"
                 >
-                  {item.icon} <span>{item.name}</span>
+                  <span className="text-2xl">{item.icon}</span>{" "}
+                  <span>{item.name}</span>
                 </Link>
               ))}
             </CardContent>
