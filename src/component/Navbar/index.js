@@ -95,7 +95,7 @@ const Navbar = () => {
         </div>
 
         {/* Social Links - Always visible */}
-        <div className="flex items-center gap-4 text-2xl sm:text-3xl">
+        <div className="flex items-center gap-5 text-2xl sm:text-3xl">
           {renderedSocialLink}
         </div>
           {/* <div className="px-2">Theme</div> */}
