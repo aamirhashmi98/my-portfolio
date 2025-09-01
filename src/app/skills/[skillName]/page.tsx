@@ -1,13 +1,6 @@
-// "use client";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "@/components/ui/card";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { skills } from "@/data/static";
 import Link from "next/link";
-// import { useEffect } from "react";
 
 export default async function skillDetail({
   params,
@@ -15,14 +8,6 @@ export default async function skillDetail({
   params: Promise<{ skillName: string }>;
 }) {
   const { skillName } = await params;
-
-  // useEffect(() => {
-  //   document.body.classList.add("overflow-hidden");
-  //   return () => {
-  //     document.body.classList.remove("overflow-hidden");
-  //   };
-  // }, []);
-
   const matchingItem = skills.flatMap((skill) =>
     skill.items.filter((item) => item.id === skillName)
   );
@@ -53,7 +38,6 @@ export default async function skillDetail({
         {" "}
         {renderedSkillDetail}
         <div className="flex justify-center">
-          {" "}
           <Link
             href={"/skills"}
             className="mx-4 my-4 px-8 py-2 text-shadow-sm inline-block bg-black text-2xl text-white shadow-lg hover:bg-gray-900 transition-all md:my-4"

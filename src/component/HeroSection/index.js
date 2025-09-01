@@ -74,14 +74,6 @@ const HeroSection = () => {
 
         <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mt-4 sm:mt-6">
           Frontend Developer
-          {/* <Typewriter
-                speed="fast"
-                variance={0.8}
-                backspace="word"
-                cursorBlinkSpeed={2}
-              >
-                {`Coder`}
-          </Typewriter> */}
         </h3>
       </div>
 
@@ -89,7 +81,7 @@ const HeroSection = () => {
       <div className="flex justify-center max-w-4xl w-full mt-6 sm:mt-8 text-base sm:text-lg md:text-xl min-h-[150px]">
         <TypewriterWithBold
           text={text}
-          boldWords={[
+           boldWords={[
             "experienced",
             "2",
             "years",

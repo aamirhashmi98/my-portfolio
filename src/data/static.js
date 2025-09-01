@@ -14,13 +14,13 @@ export const profile = {
       {
         company: "Magic EdTech",
         designation: "Frontend Developer",
-        description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nisi non quis, minus velit in? Aut at dolorem voluptatum excepturi quas nulla architecto mollitia aperiam obcaecati possimus.`,
+        description: `Designed and developed responsive and scalable front-end applications tailored to client requirements using React.js and JavaScript (ES6+). Built and maintained RESTful APIs with Node.js and Express.js, ensuring smooth communication between front-end and back-end.  Worked with MongoDB for efficient database management, implementing CRUD operations and optimizing queries. Contributed to all phases of the software development lifecycle (SDLC)focusing on performance, scalability, and maintainability.`,
         duration: "Jun, 2022 - Dec, 2024",
       },
       {
         company: "Elymer",
         designation: "Junior Software Engineer",
-        description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem nisi non quis, minus velit in? Aut at dolorem voluptatum excepturi quas nulla architecto mollitia aperiam obcaecati possimus.`,
+        description: `Implemented quality control processes for PCB manufacturing to ensure precision and efficiency. Analyzed test data and collaborated with engineering teams to resolve defects. Maintained documentation of test reports and quality assessments`,
         duration: "Apr, 2021 - Jun, 2022",
       },
     ],
@@ -41,17 +41,17 @@ import { FaLocationDot } from "react-icons/fa6";
 export const contactInfo = [
   {
     medium: "phone",
-    icon: <FaPhoneAlt className="text-6xl" />,
+    icon: <FaPhoneAlt className="" />,
     data: "+91-8587893201",
   },
   {
     medium: "mail",
-    icon: <SiGmail className="text-6xl" />,
+    icon: <SiGmail className="" />,
     data: "aamirhashmi113@gmail.com",
   },
   {
     medium: "location",
-    icon: <FaLocationDot className="text-6xl" />,
+    icon: <FaLocationDot className="" />,
     data: "Faridabad, Haryana",
   },
 ];
@@ -88,7 +88,7 @@ export const skills = [
       {
         id: "html",
         name: "HTML",
-        icon: <FaHtml5 className="text-2xl" />,
+        icon: <FaHtml5 /*className="text-blue-600"*/ />,
         href: "/skills/html",
         description:
           "HTML5 is the latest version of the web’s core markup language, providing new semantic elements, multimedia support, and enhanced capabilities for modern web development.",
@@ -98,7 +98,7 @@ export const skills = [
         id: "css",
         name: "CSS3",
         href: "/skills/css",
-        icon: <SiCss3 className="text-2xl" />,
+        icon: <SiCss3 /*className="text-orange-400"*/ />,
         description:
           "CSS3 is the latest evolution of Cascading Style Sheets, introducing advanced styling features like animations, transitions, flexbox, grid, and responsive design capabilities.",
         ratings: "⭐⭐⭐⭐",
@@ -106,7 +106,7 @@ export const skills = [
       {
         id: "javascript",
         name: "JavaScript",
-        icon: <SiJavascript className="text-2xl" />,
+        icon: <SiJavascript /*className="text-yellow-300"*/ />,
         href: "/skills/javascript",
         description:
           "A dynamic scripting language that enables interactive, user-friendly websites and applications, widely used for both frontend and backend development.",
@@ -115,7 +115,7 @@ export const skills = [
       {
         id: "react",
         name: "React",
-        icon: <FaReact className="text-2xl" />,
+        icon: <FaReact /*className="text-cyan-400"*/ />,
         href: "/skills/react",
         description:
           "React is a powerful JavaScript library for building fast, interactive, and scalable user interfaces for web and mobile applications.",
@@ -124,7 +124,7 @@ export const skills = [
       {
         id: "redux",
         name: "Redux",
-        icon: <SiRedux className="text-2xl" />,
+        icon: <SiRedux /*className="text-purple-500"*/ />,
         href: "/skills/redux",
         description:
           "A powerful state management library that helps manage and centralize app state, ensuring predictable behavior across complex JavaScript or React projects.",
@@ -133,7 +133,7 @@ export const skills = [
       {
         id: "next.js",
         name: "Next.js",
-        icon: <IoTriangleSharp className="text-2xl" />,
+        icon: <IoTriangleSharp className="" />,
         href: "/skills/next.js",
         description:
           "Next.js is a React framework for building fast, SEO-friendly, and scalable web applications with features like server-side rendering and static site generation.",
@@ -142,7 +142,7 @@ export const skills = [
       {
         id: "tailwindcss",
         name: "Tailwindcss",
-        icon: <SiTailwindcss className="text-2xl" />,
+        icon: <SiTailwindcss /*className="text-blue-500"*/ />,
         href: "/skills/tailwindcss",
         description:
           "Tailwind CSS is a utility-first CSS framework that enables rapid UI development with highly customizable, low-level styling classes for building modern responsive designs.",
@@ -151,7 +151,7 @@ export const skills = [
       {
         id: "bootstrap",
         name: "Bootstrap",
-        icon: <SiReactbootstrap className="text-2xl" />,
+        icon: <SiReactbootstrap /*className="text-blue-800"*/ />,
         href: "/skills/bootstrap",
         description: `React Bootstrap is a popular UI library that rebuilds Bootstrap components as React components, enabling seamless, responsive design with React’s declarative style.`,
         ratings: "⭐⭐⭐⭐",
@@ -159,7 +159,7 @@ export const skills = [
       {
         id: "bulmacss",
         name: "Bulmacss",
-        icon: <SiBulma className="text-2xl" />,
+        icon: <SiBulma /*className="text-green-300"*/ />,
         href: "/skills/bulmacss",
         description:
           "A lightweight CSS framework leveraging Flexbox to create responsive, mobile-first websites with easy-to-use classes and a clean, minimal design.",
@@ -168,7 +168,7 @@ export const skills = [
       {
         id: "materialui",
         name: "Materialui",
-        icon: <SiMui className="text-2xl" />,
+        icon: <SiMui /*className="text-blue-700"*/ />,
         href: "/skills/materialui",
         description: "",
         ratings: "⭐⭐⭐⭐",
@@ -182,7 +182,7 @@ export const skills = [
       {
         id: "git",
         name: "Git",
-        icon: <FaGitAlt className="text-2xl" />,
+        icon: <FaGitAlt /*className="text-orange-600"*/ />,
         href: "/skills/git",
         description: "",
         ratings: "⭐⭐⭐⭐",
@@ -190,7 +190,7 @@ export const skills = [
       {
         id: "github",
         name: "GitHub",
-        icon: <SiGithub className="text-2xl" />,
+        icon: <SiGithub className="" />,
         href: "/skills/github",
         description:
           "GitHub is a leading platform for version control and collaboration, enabling developers to host, review, and manage code projects efficiently using Git.",
@@ -199,7 +199,7 @@ export const skills = [
       {
         id: "postman",
         name: "Postman",
-        icon: <SiPostman className="text-2xl" />,
+        icon: <SiPostman /*className="text-orange-400"*/ />,
         href: "/skills/postman",
         description: "",
         ratings: "⭐⭐⭐⭐",
@@ -207,7 +207,7 @@ export const skills = [
       {
         id: "vscode",
         name: "VsCode",
-        icon: <VscVscode className="text-2xl" />,
+        icon: <VscVscode /*className="text-blue-600"*/ />,
         href: "/skills/vscode",
         description: "",
         ratings: "⭐⭐⭐",
@@ -215,7 +215,7 @@ export const skills = [
       {
         id: "netlify",
         name: "Netlify",
-        icon: <SiNetlify className="text-2xl" />,
+        icon: <SiNetlify /*className="text-cyan-300"*/ />,
         href: "/skills/netlify",
         description: "",
         ratings: "⭐⭐⭐",
@@ -223,7 +223,7 @@ export const skills = [
       {
         id: "figma",
         name: "Figma",
-        icon: <SiFigma className="text-2xl" />,
+        icon: <SiFigma className="" />,
         href: "/skills/figma",
         description: "",
         ratings: "⭐⭐⭐",
@@ -231,7 +231,7 @@ export const skills = [
       {
         id: "vercel",
         name: "Vercel",
-        icon: <SiVercel className="text-2xl" />,
+        icon: <SiVercel className="" />,
         href: "/skills/vercel",
         description: "",
         ratings: "⭐⭐⭐",
@@ -239,7 +239,7 @@ export const skills = [
       {
         id: "jira",
         name: "Jira",
-        icon: <SiAtlassian className="text-2xl" />,
+        icon: <SiAtlassian /*className="text-blue-600"*/ />,
         href: "/skills/jira",
         description:
           "A popular tool used by teams to organize tasks, track progress, and collaborate seamlessly during software development and project management.",
@@ -254,7 +254,7 @@ export const skills = [
       {
         id: "node.js",
         name: "Node.js",
-        icon: <FaNodeJs className="text-2xl" />,
+        icon: <FaNodeJs /*className="text-green-700"*/ />,
         href: "/skills/node.js",
         description:
           "Node.js is a JavaScript runtime that allows server-side programming, enabling fast, scalable network applications with non-blocking, event-driven architecture.",
@@ -263,7 +263,7 @@ export const skills = [
       {
         id: "express.js",
         name: "Express.js",
-        icon: <SiExpress className="text-2xl" />,
+        icon: <SiExpress /*className="text-lime-500"*/ />,
         href: "/skills/express.js",
         description:
           "Express.js is a fast, minimalist Node.js framework that simplifies building scalable, robust web applications and APIs with flexible routing and middleware support.",
@@ -272,7 +272,7 @@ export const skills = [
       {
         id: "mongodb",
         name: "MongoDB",
-        icon: <SiMongodb className="text-2xl" />,
+        icon: <SiMongodb /*className="text-green-600"*/ />,
         href: "/skills/mongodb",
         description:
           "MongoDB is a flexible, document-oriented NoSQL database designed for scalability and high performance, making it ideal for modern, data-driven applications.",
@@ -287,7 +287,7 @@ export const skills = [
       {
         id: "c",
         name: "C",
-        icon: <SiC className="text-2xl" />,
+        icon: <SiC /*className="text-blue-800"*/ />,
         href: "/skills/c",
         description: "",
 
@@ -296,7 +296,7 @@ export const skills = [
       {
         id: "js",
         name: "JavaScript",
-        icon: <SiJavascript className="text-2xl" />,
+        icon: <SiJavascript /*className="text-yellow-300"*/ />,
         href: "/skills/js",
         description:
           "A dynamic scripting language that enables interactive, user-friendly websites and applications, widely used for both frontend and backend development.",
@@ -305,7 +305,7 @@ export const skills = [
       {
         id: "typescript",
         name: "TypeScript",
-        icon: <SiTypescript className="text-2xl" />,
+        icon: <SiTypescript /*className="text-blue-700"*/ />,
         href: "/skills/typescript",
         description:
           "TypeScript is a strongly typed superset of JavaScript that adds static typing, enhancing code quality, maintainability, and developer productivity.",
@@ -315,7 +315,7 @@ export const skills = [
       {
         id: "python",
         name: "Python",
-        icon: <SiPython className="text-2xl" />,
+        icon: <SiPython /*className="text-amber-400"*/ />,
         href: "/skills/python",
         description: "",
 
