@@ -79,7 +79,7 @@ const Navbar = () => {
         {/* Center - Logo */}
         <div className="flex items-center justify-center">
           <span className="flex items-center gap-1 text-2xl sm:text-3xl font-bold">
-            Aamir <span>😎</span>
+           <span className="text-blue-600">Aamir</span>  <span>😎</span>
           </span>
         </div>
 

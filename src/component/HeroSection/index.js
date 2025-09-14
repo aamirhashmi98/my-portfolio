@@ -19,6 +19,7 @@ const TypewriterWithBold = ({
 }) => {
   const [index, setIndex] = useState(0);
   const [skipAnimation, setSkipAnimation] = useState(false);
+  const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
     const visited = sessionStorage.getItem(storageKey);
@@ -26,6 +27,7 @@ const TypewriterWithBold = ({
     if (visited) {
       setSkipAnimation(true);
       setIndex(text.length);
+      setShowCursor(false); // agar pehle visit ho chuka hai to cursor ki zarurat nahi
     } else {
       setSkipAnimation(false);
       sessionStorage.setItem(storageKey, "true");
@@ -36,6 +38,12 @@ const TypewriterWithBold = ({
     if (!skipAnimation && index < text.length) {
       const timeout = setTimeout(() => setIndex(index + 1), speed);
       return () => clearTimeout(timeout);
+    }
+
+    // jab text complete ho jaye
+    if (index === text.length) {
+      const timer = setTimeout(() => setShowCursor(false), 100); // 2 sec ke baad cursor hata do
+      return () => clearTimeout(timer);
     }
   }, [index, text, speed, skipAnimation]);
 
@@ -53,7 +61,7 @@ const TypewriterWithBold = ({
   return (
     <div className="px-4 sm:px-8 md:px-12">
       {renderWithBold(text.slice(0, index))}
-      <span className="cursor">|</span>
+      {showCursor && <span className="cursor">|</span>}
     </div>
   );
 };
