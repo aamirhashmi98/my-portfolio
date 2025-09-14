@@ -7,76 +7,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Link from "next/link";
+import { projects } from "../../data/static";
 import { TbExternalLink } from "react-icons/tb";
-
-const projects = [
-  {
-    id: "sdknk",
-    title: "Map",
-    image: "",
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, at itaque expedita ex quidem neque molestiae! Architecto eum eligendi iure debitis id quod iusto fugit officia laboriosam ipsa nam totam provident magni sint deleniti esse quisquam tenetur dicta culpa possimus corporis doloremque repellat, suscipit nisi. Repellat ex nesciunt porro quia excepturi accusantium impedit, labore unde optio illum autem perspiciatis quos. Quasi perferendis temporibus, mollitia excepturi eum vero iusto obcaecati earum explicabo eos porro? Dolores similique expedita ipsam quidem neque corrupti?`,
-    stack: {
-      title: "Tech Stack",
-      list: ["Next.js", "React", "TpyeScript", "Tailwind-css", "MUI"],
-    },
-    href: "project-link",
-  },
-  {
-    id: "dgjs",
-    title: "Guess Number",
-    image: "projectImage",
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, at itaque expedita ex quidem neque molestiae! Architecto eum eligendi iure debitis id quod iusto fugit officia laboriosam ipsa nam totam provident magni sint deleniti esse quisquam tenetur dicta culpa possimus corporis doloremque repellat, suscipit nisi. Repellat ex nesciunt porro quia excepturi accusantium impedit, labore unde optio illum autem perspiciatis quos. Quasi perferendis temporibus, mollitia excepturi eum vero iusto obcaecati earum explicabo eos porro? Dolores similique expedita ipsam quidem neque corrupti?`,
-    stack: {
-      title: "Tech Stack",
-      list: ["Next.js", "React", "TpyeScript", "Tailwind-css", "MUI"],
-    },
-    href: "projectLink",
-  },
-  {
-    id: "sdjg",
-    title: "Century Dice",
-    image: "projectImage",
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, at itaque expedita ex quidem neque molestiae! Architecto eum eligendi iure debitis id quod iusto fugit officia laboriosam ipsa nam totam provident magni sint deleniti esse quisquam tenetur dicta culpa possimus corporis doloremque repellat, suscipit nisi. Repellat ex nesciunt porro quia excepturi accusantium impedit, labore unde optio illum autem perspiciatis quos. Quasi perferendis temporibus, mollitia excepturi eum vero iusto obcaecati earum explicabo eos porro? Dolores similique expedita ipsam quidem neque corrupti?`,
-    stack: {
-      title: "Tech Stack",
-      list: ["Next.js", "React", "TpyeScript", "Tailwind-css", "MUI"],
-    },
-    href: "projectLink",
-  },
-  {
-    id: "wpoejg",
-    title: "Bankist Application",
-    image: "projectImage",
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, at itaque expedita ex quidem neque molestiae! Architecto eum eligendi iure debitis id quod iusto fugit officia laboriosam ipsa nam totam provident magni sint deleniti esse quisquam tenetur dicta culpa possimus corporis doloremque repellat, suscipit nisi. Repellat ex nesciunt porro quia excepturi accusantium impedit, labore unde optio illum autem perspiciatis quos. Quasi perferendis temporibus, mollitia excepturi eum vero iusto obcaecati earum explicabo eos porro? Dolores similique expedita ipsam quidem neque corrupti?`,
-    stack: {
-      title: "Tech Stack",
-      list: ["Next.js", "React", "TpyeScript", "Tailwind-css", "MUI"],
-    },
-    href: "projectLink",
-  },
-  {
-    id: "lskdn",
-    title: "Forkify",
-    image: "projectImage",
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, at itaque expedita ex quidem neque molestiae! Architecto eum eligendi iure debitis id quod iusto fugit officia laboriosam ipsa nam totam provident magni sint deleniti esse quisquam tenetur dicta culpa possimus corporis doloremque repellat, suscipit nisi. Repellat ex nesciunt porro quia excepturi accusantium impedit, labore unde optio illum autem perspiciatis quos. Quasi perferendis temporibus, mollitia excepturi eum vero iusto obcaecati earum explicabo eos porro? Dolores similique expedita ipsam quidem neque corrupti?`,
-    stack: {
-      title: "Tech Stack",
-      list: ["Next.js", "React", "TpyeScript", "Tailwind-css", "MUI"],
-    },
-    href: "projectLink",
-  },
-  {
-    id: "psojg",
-    title: "Node Farm",
-    image: "projectImage",
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, at itaque expedita ex quidem neque molestiae! Architecto eum eligendi iure debitis id quod iusto fugit officia laboriosam ipsa nam totam provident magni sint deleniti esse quisquam tenetur dicta culpa possimus corporis doloremque repellat, suscipit nisi. Repellat ex nesciunt porro quia excepturi accusantium impedit, labore unde optio illum autem perspiciatis quos. Quasi perferendis temporibus, mollitia excepturi eum vero iusto obcaecati earum explicabo eos porro? Dolores similique expedita ipsam quidem neque corrupti?`,
-    stack: {
-      title: "Tech Stack",
-      list: ["Node.js", "React", "TpyeScript", "Tailwind-css", "MUI"],
-    },
-    href: "projectLink",
-  },
-];
 
 const renderedProjectCard = projects.map((project) => {
   const { id, title, description, href } = project;

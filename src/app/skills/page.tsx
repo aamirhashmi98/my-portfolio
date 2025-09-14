@@ -1,177 +1,41 @@
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
-import { IoTriangleSharp } from "react-icons/io5";
-import { FaReact, FaNodeJs, FaHtml5 } from "react-icons/fa";
-import {
-  SiRedux,
-  SiTypescript,
-  SiJavascript,
-  SiExpress,
-  SiMongodb,
-  SiTailwindcss,
-  SiBulma,
-  SiReactbootstrap,
-  SiCss3,
-  SiGithub,
-  SiAtlassian,
-} from "react-icons/si";
-
-const cards = [
-  {
-    id: 1,
-    title: "Next.js",
-    icon: <IoTriangleSharp className="text-4xl" />,
-    description:
-      "Next.js is a React framework for building fast, SEO-friendly, and scalable web applications with features like server-side rendering and static site generation.",
-    ratings: "⭐⭐⭐⭐",
-  },
-  {
-    id: 2,
-    title: "React",
-    icon: <FaReact className="text-4xl" />,
-    description:
-      "React is a powerful JavaScript library for building fast, interactive, and scalable user interfaces for web and mobile applications.",
-    ratings: "⭐⭐⭐⭐",
-  },
-  {
-    id: 3,
-    title: "Redux",
-    icon: <SiRedux className="text-4xl" />,
-    description:
-      "A powerful state management library that helps manage and centralize app state, ensuring predictable behavior across complex JavaScript or React projects.",
-    ratings: "⭐⭐⭐⭐",
-  },
-  {
-    id: 4,
-    title: "TypeScript",
-    icon: <SiTypescript className="text-4xl" />,
-    description:
-      "TypeScript is a strongly typed superset of JavaScript that adds static typing, enhancing code quality, maintainability, and developer productivity.",
-
-    ratings: "⭐⭐⭐⭐",
-  },
-  {
-    id: 5,
-    title: "JavaScript",
-    icon: <SiJavascript className="text-4xl" />,
-    description:
-      "A dynamic scripting language that enables interactive, user-friendly websites and applications, widely used for both frontend and backend development.",
-    ratings: "⭐⭐⭐⭐",
-  },
-  {
-    id: 6,
-    title: "Node.js",
-    icon: <FaNodeJs className="text-4xl" />,
-    description:
-      "Node.js is a JavaScript runtime that allows server-side programming, enabling fast, scalable network applications with non-blocking, event-driven architecture.",
-    ratings: "⭐⭐",
-  },
-  {
-    id: 7,
-    title: "Express.js",
-    icon: <SiExpress className="text-4xl" />,
-    description:
-      "Express.js is a fast, minimalist Node.js framework that simplifies building scalable, robust web applications and APIs with flexible routing and middleware support.",
-    ratings: "⭐⭐",
-  },
-  {
-    id: 8,
-    title: "MongoDB",
-    icon: <SiMongodb className="text-4xl" />,
-    description:
-      "MongoDB is a flexible, document-oriented NoSQL database designed for scalability and high performance, making it ideal for modern, data-driven applications.",
-    ratings: "⭐⭐",
-  },
-  {
-    id: 15,
-    title: "GitHub",
-    icon: <SiGithub className="text-4xl" />,
-    description:
-      "GitHub is a leading platform for version control and collaboration, enabling developers to host, review, and manage code projects efficiently using Git.",
-    ratings: "⭐⭐⭐⭐",
-  },
-  {
-    id: 16,
-    title: "Jira Tool",
-    icon: <SiAtlassian className="text-4xl" />,
-    description:
-      "A popular tool used by teams to organize tasks, track progress, and collaborate seamlessly during software development and project management.",
-    ratings: "⭐⭐⭐",
-  },
-  {
-    id: 9,
-    title: "Tailwind css",
-    icon: <SiTailwindcss className="text-4xl" />,
-    description:
-      "Tailwind CSS is a utility-first CSS framework that enables rapid UI development with highly customizable, low-level styling classes for building modern responsive designs.",
-    ratings: "⭐⭐⭐⭐",
-  },
-  {
-    id: 10,
-    title: "Bulma css",
-    icon: <SiBulma className="text-4xl" />,
-    description:
-      "A lightweight CSS framework leveraging Flexbox to create responsive, mobile-first websites with easy-to-use classes and a clean, minimal design.",
-    ratings: "⭐⭐⭐",
-  },
-  {
-    id: 11,
-    title: "React Bootstrap",
-    icon: <SiReactbootstrap className="text-4xl" />,
-    description: `React Bootstrap is a popular UI library that rebuilds Bootstrap components as React components, enabling seamless, responsive design with React’s declarative style.`,
-    ratings: "⭐⭐⭐⭐",
-  },
-
-  {
-    id: 13,
-    title: "HTML",
-    icon: <FaHtml5 className="text-4xl" />,
-    description:
-      "HTML5 is the latest version of the web’s core markup language, providing new semantic elements, multimedia support, and enhanced capabilities for modern web development.",
-    ratings: "⭐⭐⭐⭐",
-  },
-  {
-    id: 12,
-    title: "CSS 3",
-    icon: <SiCss3 className="text-4xl" />,
-    description:
-      "CSS3 is the latest evolution of Cascading Style Sheets, introducing advanced styling features like animations, transitions, flexbox, grid, and responsive design capabilities.",
-    ratings: "⭐⭐⭐⭐",
-  },
-];
-
-const SkillsPage = () => {
+import Link from "next/link";
+import { skills } from "../../data/static";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+const skillsPage = () => {
   return (
     <>
-      <div className="grid grid-cols-4 gap-8 mx-16 my-24 ">
-        {cards.map((card) => (
+      <section
+        id="skills"
+        className="grid grid-cols-1 md:grid-cols-2 gap-5 p-8 sm:px-24 sm:py-12 md:px-18 md:py-16 lg:px-24 xl:px-42 lg:py-18"
+      >
+        {skills.map((category) => (
           <Card
-            key={card.id}
-            className="w-full bg-gray-100 transition-transform duration-300 hover:scale-110 cursor-pointer"
+            key={category.id}
+            className="w-full h-full border-2 md:px-3 md:py-2 lg:px-6 lg:py-4"
           >
-            <CardHeader className="text-center">
-              <span className="flex justify-center">{card.icon}</span>
-              <CardTitle className="text-lg text-shadow-md">
-                {card.title}
-              </CardTitle>
-              <CardContent className="text-gray-500 text-sm m-2 p-2">
-                {card.description}
-              </CardContent>
-              <CardFooter className="flex justify-center text-md text-gray-500">
-                ratings my self : {card.ratings}
-              </CardFooter>
+            {/* Category Title */}
+            <CardHeader className="text-xl lg:text-2xl font-semibold text-center pt-3">
+              {category.title}
             </CardHeader>
+
+            {/* Category Items */}
+            <CardContent className="grid grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-5 md:px-4 md:py-2">
+              {category.items.map((item) => (
+                <Link
+                  key={item.id}
+                  href={item.href}
+                  className="flex border-2 rounded-3xl justify-center items-center text-center gap-1 md:gap-2 px-2 py-3 md:px-3 md:py-3 lg:px-0 lg:py-3 hover:bg-gray-100 transition"
+                >
+                  <span className="text-xl xl:text-2xl">{item.icon}</span>
+                  <span className="text-sm xl:text-lg">{item.name}</span>
+                </Link>
+              ))}
+            </CardContent>
           </Card>
         ))}
-      </div>
+      </section>
     </>
   );
 };
 
-export default SkillsPage;
+export default skillsPage;
