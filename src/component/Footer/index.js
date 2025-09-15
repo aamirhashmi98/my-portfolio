@@ -59,13 +59,13 @@ const Footer = () => {
       {/* Email */}
       <div className="flex items-center justify-center gap-2 mt-4">
         <FiMail />
-        <span className="font-light text-sm hover:underline">
+        <span className="text-sm hover:underline">
           aamirhashmi113@gmail.com
         </span>
       </div>
 
       {/* Copyright */}
-      <span className="flex justify-center text-xs sm:text-sm mt-4 text-gray-400">
+      <span className="flex justify-center text-xs sm:text-sm mt-4">
         © 2025 Aamir Hashmi, All rights reserved.
       </span>
     </footer>

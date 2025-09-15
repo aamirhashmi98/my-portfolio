@@ -19,6 +19,7 @@ const TypewriterWithBold = ({
 }) => {
   const [index, setIndex] = useState(0);
   const [skipAnimation, setSkipAnimation] = useState(false);
+  const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
     const visited = sessionStorage.getItem(storageKey);
@@ -26,6 +27,7 @@ const TypewriterWithBold = ({
     if (visited) {
       setSkipAnimation(true);
       setIndex(text.length);
+      setShowCursor(false); // agar pehle visit ho chuka hai to cursor ki zarurat nahi
     } else {
       setSkipAnimation(false);
       sessionStorage.setItem(storageKey, "true");
@@ -36,6 +38,12 @@ const TypewriterWithBold = ({
     if (!skipAnimation && index < text.length) {
       const timeout = setTimeout(() => setIndex(index + 1), speed);
       return () => clearTimeout(timeout);
+    }
+
+    // jab text complete ho jaye
+    if (index === text.length) {
+      const timer = setTimeout(() => setShowCursor(false), 100); // 2 sec ke baad cursor hata do
+      return () => clearTimeout(timer);
     }
   }, [index, text, speed, skipAnimation]);
 
@@ -53,66 +61,62 @@ const TypewriterWithBold = ({
   return (
     <div className="px-4 sm:px-8 md:px-12">
       {renderWithBold(text.slice(0, index))}
-      <span className="cursor">|</span>
+      {showCursor && <span className="cursor">|</span>}
     </div>
   );
 };
 
 const HeroSection = () => {
   return (
-    <section className="min-h-[calc(100vh-80px)] w-full flex flex-col justify-center items-center text-center px-4 sm:px-8">
-      {/* Headings */}
-      <div className="space-y-6">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl animate-slideDown font-light">
-          Welcome to my{" "}
-          <span className="highlight font-semibold">Portfolio</span>
-        </h1>
+   <section className="min-h-[calc(100vh-80px)] w-full flex justify-center items-center px-4 sm:px-8">
+  <div className="flex flex-col items-center text-center">
+    {/* Headings */}
+    <div>
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl animate-slideDown font-light">
+        Welcome to my <span className="highlight font-semibold">Portfolio</span>
+      </h1>
 
-        <h2 className="font-light text-2xl sm:text-3xl md:text-4xl mt-4 sm:mt-6">
-          Hi, I am <span className="font-semibold">Aamir Hashmi</span>
-        </h2>
+      <h2 className="font-light text-2xl sm:text-3xl md:text-4xl mt-1 sm:mt-6">
+        Hi, I am <span className="font-semibold">Aamir Hashmi</span>
+      </h2>
 
-        <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mt-4 sm:mt-6">
-          Frontend Developer
-          {/* <Typewriter
-                speed="fast"
-                variance={0.8}
-                backspace="word"
-                cursorBlinkSpeed={2}
-              >
-                {`Coder`}
-          </Typewriter> */}
-        </h3>
-      </div>
+      <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mt-2 sm:mt-6">
+        Frontend Developer
+      </h3>
+    </div>
 
-      {/* Typewriter Text */}
-      <div className="flex justify-center max-w-4xl w-full mt-6 sm:mt-8 text-base sm:text-lg md:text-xl min-h-[150px]">
-        <TypewriterWithBold
-          text={text}
-          boldWords={[
-            "experienced",
-            "2",
-            "years",
-            "JavaScript",
-            "React",
-            "Next.js",
-            "OpenAI",
-          ]}
-          speed={40}
-        />
-      </div>
-       <div className="mt-16">
+    {/* Typewriter Text */}
+    <div className="flex justify-center max-w-4xl w-full mt-2 sm:mt-8 text-base sm:text-lg md:text-xl min-h-[265px] md:min-h-[170px]">
+      <TypewriterWithBold
+        text={text}
+        boldWords={[
+          "experienced",
+          "2",
+          "years",
+          "JavaScript",
+          "React",
+          "Next.js",
+          "OpenAI",
+        ]}
+        speed={40}
+      />
+    </div>
+
+    {/* Resume Button */}
+    <div className="mt-10">
       <Link
         href="https://drive.google.com/file/d/1CHkP1PPpFTktdsGl4CtD9u4MGiZ87-xQ/view?usp=drive_link"
         target="_blank"
-        rel="noopener noreferrer" // SECURITY best practice
+        rel="noopener noreferrer"
       >
         <span className="inline-flex items-center text-sm text-white bg-black md:text-lg px-5 py-3 rounded-sm cursor-pointer transition-transform duration-300 hover:bg-gray-800 drop-shadow-[0_10px_20px_rgba(0,0,0,0.9)]">
-          Download Resume<FiDownload className="md:text-xl ml-2" />
+          Download Resume <FiDownload className="md:text-xl ml-2" />
         </span>
       </Link>
     </div>
-    </section>
+  </div>
+</section>
+
   );
 };
 

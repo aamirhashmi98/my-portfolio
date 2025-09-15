@@ -50,7 +50,7 @@ const About = () => {
           <h3 className="text-xl sm:text-2xl md:text-3xl text-center sm:text-left font-semibold">
             {about.name} - {about.designation}
           </h3>
-          <p className="text-center sm:text-left text-gray-600 text-sm md:text-base lg:text-lg leading-relaxed">
+          <p className=" px-4 md:px-0 sm:text-left text-gray-600 text-sm md:text-base lg:text-lg leading-relaxed">
             {about.description}
           </p>
         </div>
