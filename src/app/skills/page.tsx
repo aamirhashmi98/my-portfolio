@@ -1,6 +1,8 @@
+"use client";
 import Link from "next/link";
 import { skills } from "../../data/static";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+
 const skillsPage = () => {
   return (
     <>

@@ -1,4 +1,9 @@
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
 import { skills } from "@/data/static";
 import Link from "next/link";
 
@@ -12,20 +17,18 @@ export default async function skillDetail({
     skill.items.filter((item) => item.id === skillName)
   );
   const renderedSkillDetail = matchingItem.map((card) => (
-    <article key={card.id} className="w-full flex justify-center my-8">
-      <Card className="flex flex-col items-center justify-center gap-4 bg-white rounded-lg shadow-md mx-2  sm:w-1/2 md:w-1/3 lg:w-1/4">
-        <div className="flex flex-row">
-          <span className="text-2xl p-2 flex items-center text-center">
-            {card.icon}
-          </span>
-          <span className="text-2xl font-bold p-2 text-center items-center">
+    <article key={card.id} className="">
+      <Card className="flex-1 bg-gray-200 m-12">
+        <CardHeader className="">
+          <span className="flex justify-center text-4xl">{card.icon}</span>
+          <span className=" flex justify-center text-lg font-semibold">
             {card.name}
           </span>
-        </div>
-        <CardContent className="text-base text-center text-gray-600">
+        </CardHeader>
+        <CardContent className="flex justify-center text-center text-sm text-gray-500 md:text-lg">
           {card.description}
         </CardContent>
-        <CardFooter className="text-sm text-gray-500 mt-2">
+        <CardFooter className=" flex justify-center">
           ratings my self - {card.ratings}
         </CardFooter>
       </Card>
@@ -34,8 +37,7 @@ export default async function skillDetail({
 
   return (
     <>
-      <section>
-        {" "}
+      <section className="min-h-screen flex flex-col">
         {renderedSkillDetail}
         <div className="flex justify-center">
           <Link

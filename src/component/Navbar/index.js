@@ -2,40 +2,12 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+ import { navLinks, socialLinks } from "@/data/static";
 
-const navLinks = [
-  {
-    label: "Home",
-    href: "/",
-  },
-  {
-    label: "About me",
-    href: "/about",
-  },
-  {
-    label: "Skills",
-    href: "/skills",
-  },
-  {
-    label: "My Work",
-    href: "/work",
-  },
-  {
-    label: "Contact me",
-    href: "/contact",
-  },
-];
 
-const socialLinks = [
-  { icon: <IoLogoGithub />, href: "https://github.com/aamirhashmi98" },
-  {
-    icon: <IoLogoLinkedin />,
-    href: "https://www.linkedin.com/in/aamirhashmi98",
-  },
-];
+
 
 const Navbar = () => {
   const pathname = usePathname();

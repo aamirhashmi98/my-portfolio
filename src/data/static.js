@@ -80,6 +80,7 @@ import {
   SiFigma,
   SiVercel,
 } from "react-icons/si";
+import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
 export const skills = [
   {
     title: "Frontend",
@@ -393,5 +394,39 @@ export const projects = [
       list: ["Node.js", "React", "TpyeScript", "Tailwind-css", "MUI"],
     },
     href: "projectLink",
+  },
+];
+
+
+//------------------------------------ NAVLINKS ----------------------------------------------
+
+export const navLinks = [
+  {
+    label: "Home",
+    href: "/",
+  },
+  {
+    label: "About me",
+    href: "/about",
+  },
+  {
+    label: "Skills",
+    href: "/skills",
+  },
+  {
+    label: "My Work",
+    href: "/work",
+  },
+  {
+    label: "Contact me",
+    href: "/contact",
+  },
+];
+
+export const socialLinks = [
+  { icon: <IoLogoGithub />, href: "https://github.com/aamirhashmi98" },
+  {
+    icon: <IoLogoLinkedin />,
+    href: "https://www.linkedin.com/in/aamirhashmi98",
   },
 ];
