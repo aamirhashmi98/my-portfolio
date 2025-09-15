@@ -68,7 +68,7 @@ const TypewriterWithBold = ({
 
 const HeroSection = () => {
   return (
-   <section className="min-h-[calc(100vh-80px)] w-full flex justify-center items-center px-4 sm:px-8">
+   <section className="min-h-[calc(100vh-80px)] w-full flex justify-center items-center px-1 sm:px-8">
   <div className="flex flex-col items-center text-center">
     {/* Headings */}
     <div>
@@ -86,7 +86,7 @@ const HeroSection = () => {
     </div>
 
     {/* Typewriter Text */}
-    <div className="flex justify-center max-w-4xl w-full mt-2 sm:mt-8 text-base sm:text-lg md:text-xl min-h-[265px] md:min-h-[170px]">
+    <div className="flex justify-center max-w-4xl w-full mt-2 px-0 sm:mt-8 text-base sm:text-lg md:text-xl min-h-[265px] md:min-h-[170px]">
       <TypewriterWithBold
         text={text}
         boldWords={[
