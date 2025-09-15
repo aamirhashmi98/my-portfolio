@@ -70,23 +70,23 @@ const HeroSection = () => {
   return (
     <section className="min-h-[calc(100vh-80px)] w-full flex flex-col justify-center items-center text-center px-4 sm:px-8">
       {/* Headings */}
-      <div className="space-y-6">
+      <div className="">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl animate-slideDown font-light">
           Welcome to my{" "}
           <span className="highlight font-semibold">Portfolio</span>
         </h1>
 
-        <h2 className="font-light text-2xl sm:text-3xl md:text-4xl mt-4 sm:mt-6">
+        <h2 className="font-light text-2xl sm:text-3xl md:text-4xl mt-3 sm:mt-6">
           Hi, I am <span className="font-semibold">Aamir Hashmi</span>
         </h2>
 
-        <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mt-4 sm:mt-6">
+        <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mt-3 sm:mt-6">
           Frontend Developer
         </h3>
       </div>
 
       {/* Typewriter Text */}
-      <div className="flex justify-center max-w-4xl w-full mt-6 sm:mt-8 text-base sm:text-lg md:text-xl min-h-[150px]">
+      <div className="flex justify-center max-w-4xl w-full mt-2 sm:mt-8 text-base sm:text-lg md:text-xl min-h-[270px] md:min-h-[150px]">
         <TypewriterWithBold
           text={text}
            boldWords={[

@@ -64,7 +64,7 @@ const Navbar = () => {
   return (
     <>
       {/* Main Navbar */}
-      <nav className="flex items-center justify-between w-full h-22 px-4 sm:px-12 border-2 drop-shadow-[0_10px_20px_rgba(0,0,0,0.1)] bg-white overflow-x-hidden">
+      <nav className="flex items-center justify-between w-full h-20 px-4 sm:px-12 border-2 drop-shadow-[0_10px_20px_rgba(0,0,0,0.1)] bg-white overflow-x-hidden">
         {/* Left - Mobile Menu Icon */}
         <div className="flex items-center sm:hidden">
           <Button
@@ -79,7 +79,7 @@ const Navbar = () => {
         {/* Center - Logo */}
         <div className="flex items-center justify-center">
           <span className="flex items-center gap-1 text-2xl sm:text-3xl font-bold">
-           <span className="text-blue-600">Aamir</span>  <span>😎</span>
+           <span className="">Aamir</span>  <span>😎</span>
           </span>
         </div>
 
