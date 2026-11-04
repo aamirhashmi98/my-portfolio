@@ -34,7 +34,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <>
+    <div className="relative">
       {/* Main Navbar */}
       <nav className="flex items-center justify-between w-full h-20 px-4 sm:px-12 border-2 drop-shadow-[0_10px_20px_rgba(0,0,0,0.1)] bg-white overflow-x-hidden">
         {/* Left - Mobile Menu Icon */}
@@ -75,11 +75,11 @@ const Navbar = () => {
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <div className="sm:hidden bg-background border-t px-4 py-4">
+        <div className="absolute left-4 top-20 z-50 w-max bg-white px-4 py-4 sm:hidden">
           <ul className="flex flex-col gap-4 text-lg">{renderedNavLinks}</ul>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
