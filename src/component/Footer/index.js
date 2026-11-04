@@ -22,7 +22,7 @@ const Footer = () => {
     <Link key={item.label} href={item.path}>
       <Button
         variant="link"
-        className="text-secondary cursor-pointer text-sm sm:text-base"
+        className="text-indigo-100 cursor-pointer text-sm sm:text-base hover:text-cyan-300"
       >
         {item.label}
       </Button>
@@ -38,7 +38,7 @@ const Footer = () => {
     >
       <Button
         variant="link"
-        className="text-secondary cursor-pointer text-sm sm:text-base"
+        className="text-indigo-100 cursor-pointer text-sm sm:text-base hover:text-cyan-300"
       >
         {item.label}
       </Button>
