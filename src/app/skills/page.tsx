@@ -13,7 +13,7 @@ const skillsPage = () => {
         {skills.map((category) => (
           <Card
             key={category.id}
-            className="w-full h-full border-indigo-100 bg-white/85 shadow-lg shadow-indigo-950/5 backdrop-blur-sm md:px-3 md:py-2 lg:px-6 lg:py-4"
+            className="w-full h-full border-indigo-100 bg-white/85 shadow-lg shadow-indigo-950/5 backdrop-blur-sm dark:border-slate-700 dark:bg-slate-900/85 md:px-3 md:py-2 lg:px-6 lg:py-4"
           >
             {/* Category Title */}
             <CardHeader className="text-xl lg:text-2xl font-semibold text-center pt-3">
@@ -26,7 +26,7 @@ const skillsPage = () => {
                 <Link
                   key={item.id}
                   href={item.href}
-                  className="flex border border-indigo-100 rounded-3xl justify-center items-center text-center gap-1 md:gap-2 px-2 py-3 md:px-3 md:py-3 lg:px-0 lg:py-3 hover:border-indigo-300 hover:bg-indigo-50 hover:text-indigo-700 transition-all"
+                  className="flex border border-indigo-100 rounded-3xl justify-center items-center text-center gap-1 md:gap-2 px-2 py-3 md:px-3 md:py-3 lg:px-0 lg:py-3 hover:border-indigo-300 hover:bg-indigo-50 hover:text-indigo-700 dark:border-slate-700 dark:hover:border-cyan-500 dark:hover:bg-slate-800 dark:hover:text-cyan-300 transition-all"
                 >
                   <span className="text-xl xl:text-2xl">{item.icon}</span>
                   <span className="text-sm xl:text-lg">{item.name}</span>

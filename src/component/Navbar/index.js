@@ -2,8 +2,8 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
+import { useEffect, useState } from "react";
+import { FiMenu, FiMoon, FiSun, FiX } from "react-icons/fi";
  import { navLinks, socialLinks } from "@/data/static";
 
 
@@ -11,6 +11,27 @@ import { FiMenu, FiX } from "react-icons/fi";
 
 const Navbar = () => {
   const pathname = usePathname();
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+    const nextTheme = savedTheme === "dark" || savedTheme === "light"
+      ? savedTheme
+      : preferredTheme;
+
+    setTheme(nextTheme);
+    document.documentElement.classList.toggle("dark", nextTheme === "dark");
+  }, []);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === "dark" ? "light" : "dark";
+    setTheme(nextTheme);
+    localStorage.setItem("theme", nextTheme);
+    document.documentElement.classList.toggle("dark", nextTheme === "dark");
+  };
   const renderedNavLinks = navLinks.map((link) => {
     const isActive = pathname === link.href;
     return (
@@ -37,7 +58,7 @@ const Navbar = () => {
   return (
     <div className="relative">
       {/* Main Navbar */}
-      <nav className="flex items-center justify-between w-full h-20 px-4 sm:px-12 border-b border-indigo-100 bg-white/80 shadow-sm backdrop-blur-md overflow-x-hidden">
+      <nav className="flex items-center justify-between w-full h-20 px-4 sm:px-12 border-b border-indigo-100 bg-white/80 shadow-sm backdrop-blur-md overflow-x-hidden dark:border-slate-700 dark:bg-slate-950/85">
         {/* Left - Mobile Menu Icon */}
         <div className="flex items-center sm:hidden">
           <Button
@@ -51,7 +72,7 @@ const Navbar = () => {
 
         {/* Center - Logo */}
         <div className="flex items-center justify-center">
-          <span className="flex items-center gap-1 text-2xl sm:text-3xl font-bold text-indigo-950">
+          <span className="flex items-center gap-1 text-2xl sm:text-3xl font-bold text-indigo-950 dark:text-indigo-100">
            <span className="">Aamir</span>  <span>😎</span>
           </span>
         </div>
@@ -69,6 +90,16 @@ const Navbar = () => {
 
         {/* Social Links - Always visible */}
         <div className="flex items-center gap-5 text-2xl sm:text-3xl">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleTheme}
+            aria-label={theme === "dark" ? "Enable light mode" : "Enable dark mode"}
+            aria-pressed={theme === "dark"}
+            className="rounded-full text-indigo-950 hover:bg-indigo-100 hover:text-indigo-700 dark:text-indigo-100 dark:hover:bg-slate-800 dark:hover:text-cyan-300"
+          >
+            {theme === "dark" ? <FiSun /> : <FiMoon />}
+          </Button>
           {renderedSocialLink}
         </div>
           {/* <div className="px-2">Theme</div> */}
@@ -76,7 +107,7 @@ const Navbar = () => {
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <div className="absolute left-4 top-20 z-50 w-max rounded-b-xl border border-indigo-100 bg-white/95 px-4 py-4 shadow-xl backdrop-blur sm:hidden">
+        <div className="absolute left-4 top-20 z-50 w-max rounded-b-xl border border-indigo-100 bg-white/95 px-4 py-4 shadow-xl backdrop-blur dark:border-slate-700 dark:bg-slate-950/95 sm:hidden">
           <ul className="flex flex-col gap-4 text-lg">{renderedNavLinks}</ul>
         </div>
       )}

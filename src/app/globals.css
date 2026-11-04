@@ -113,6 +113,10 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+html.dark {
+  color-scheme: dark;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -128,6 +132,13 @@ body {
   background:
     radial-gradient(circle at 10% 5%, rgb(199 210 254 / 55%), transparent 30rem),
     radial-gradient(circle at 90% 20%, rgb(165 243 252 / 45%), transparent 28rem),
+    var(--background);
+}
+
+html.dark body {
+  background:
+    radial-gradient(circle at 10% 5%, rgb(67 56 202 / 24%), transparent 30rem),
+    radial-gradient(circle at 90% 20%, rgb(8 145 178 / 18%), transparent 28rem),
     var(--background);
 }
 

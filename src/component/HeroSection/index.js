@@ -72,15 +72,15 @@ const HeroSection = () => {
   <div className="flex flex-col items-center text-center">
     {/* Headings */}
     <div>
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl animate-slideDown font-light text-slate-900">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl animate-slideDown font-light text-slate-900 dark:text-slate-100">
         Welcome to my <span className="highlight font-semibold">Portfolio</span>
       </h1>
 
-      <h2 className="font-light text-2xl sm:text-3xl md:text-4xl mt-1 sm:mt-6 text-slate-700">
+      <h2 className="font-light text-2xl sm:text-3xl md:text-4xl mt-1 sm:mt-6 text-slate-700 dark:text-slate-300">
         Hi, I am <span className="font-semibold">Aamir Hashmi</span>
       </h2>
 
-      <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mt-2 sm:mt-6 text-indigo-600">
+      <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mt-2 sm:mt-6 text-indigo-600 dark:text-cyan-300">
         Frontend Developer
       </h3>
     </div>

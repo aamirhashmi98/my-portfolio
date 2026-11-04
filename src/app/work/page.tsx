@@ -21,7 +21,7 @@ const renderedProjectCard = projects.map((project) => {
     </span>
   ));
   return (
-    <Card key={id} className="w-full border-indigo-100 bg-white/85 shadow-lg shadow-indigo-950/5 backdrop-blur-sm transition-transform hover:-translate-y-1">
+    <Card key={id} className="w-full border-indigo-100 bg-white/85 shadow-lg shadow-indigo-950/5 backdrop-blur-sm dark:border-slate-700 dark:bg-slate-900/85 transition-transform hover:-translate-y-1">
       <CardHeader className="flex">
         <CardTitle className="text-xl font-semibold text-shadow-md">
           {title}
