@@ -22,7 +22,7 @@ const About = () => {
       className="max-w-5xl mx-auto px-4 py-6 sm:px-8 md:px-12 lg:px-20 overflow-x-hidden"
     >
       {/* Profile Section */}
-      <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 md:gap-10 items-center sm:items-start md:mt-8 lg:mt-12">
+      <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 md:gap-14 items-center sm:items-center md:mt-8 lg:mt-12">
         {/* Profile Image */}
         <div className="flex justify-center sm:w-1/3">
           <Tilt
