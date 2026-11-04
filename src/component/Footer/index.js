@@ -8,7 +8,7 @@ const footerItems_1 = [
   { label: "About me", path: "/about" },
   { label: "Skills", path: "/skills" },
   { label: "My work", path: "/work" },
-  { label: "Resume", path: "/resume" },
+  { label: "Resume", path: "https://drive.google.com/file/d/1CHkP1PPpFTktdsGl4CtD9u4MGiZ87-xQ/view?usp=drive_link" },
 ];
 
 const footerItems_2 = [
@@ -34,6 +34,7 @@ const Footer = () => {
       key={item.label}
       href={item.to}
       target={item.to !== "/contact" ? "_blank" : "_self"}
+      rel={item.to !== "/contact" ? "noopener noreferrer" : undefined}
     >
       <Button
         variant="link"

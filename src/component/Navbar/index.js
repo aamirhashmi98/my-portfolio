@@ -17,6 +17,7 @@ const Navbar = () => {
       <div key={link.label} className="hover:underline">
         <Link
           href={link.href}              
+          onClick={() => setIsOpen(false)}
           className={`${isActive ? "font-bold" : ""}`}
         >
           {link.label}
@@ -26,7 +27,7 @@ const Navbar = () => {
   });
 
   const renderedSocialLink = socialLinks.map((link) => (
-    <a key={link.href} href={link.href} target="_blank">
+    <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">
       <div className="text-3xl lg:text-4xl">{link.icon}</div>
     </a>
   ));
