@@ -65,7 +65,7 @@ const About = () => {
           {experience.list.map((item, idx) => (
             <Card
               key={idx}
-              className="shadow-2xl md:transition-transform md:duration-300 md:hover:scale-105 w-full"
+              className="w-full border-indigo-100 bg-white/85 shadow-lg shadow-indigo-950/5 backdrop-blur-sm md:transition-transform md:duration-300 md:hover:scale-105"
             >
               <CardHeader>
                 <CardTitle className="text-xl sm:text-2xl  text-shadow-md">

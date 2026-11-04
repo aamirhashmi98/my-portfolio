@@ -14,11 +14,11 @@ const Navbar = () => {
   const renderedNavLinks = navLinks.map((link) => {
     const isActive = pathname === link.href;
     return (
-      <div key={link.label} className="hover:underline">
+      <div key={link.label} className="transition-colors hover:text-indigo-600">
         <Link
           href={link.href}              
           onClick={() => setIsOpen(false)}
-          className={`${isActive ? "font-bold" : ""}`}
+          className={`${isActive ? "font-bold text-indigo-600" : ""}`}
         >
           {link.label}
         </Link>
@@ -37,7 +37,7 @@ const Navbar = () => {
   return (
     <div className="relative">
       {/* Main Navbar */}
-      <nav className="flex items-center justify-between w-full h-20 px-4 sm:px-12 border-2 drop-shadow-[0_10px_20px_rgba(0,0,0,0.1)] bg-white overflow-x-hidden">
+      <nav className="flex items-center justify-between w-full h-20 px-4 sm:px-12 border-b border-indigo-100 bg-white/80 shadow-sm backdrop-blur-md overflow-x-hidden">
         {/* Left - Mobile Menu Icon */}
         <div className="flex items-center sm:hidden">
           <Button
@@ -51,7 +51,7 @@ const Navbar = () => {
 
         {/* Center - Logo */}
         <div className="flex items-center justify-center">
-          <span className="flex items-center gap-1 text-2xl sm:text-3xl font-bold">
+          <span className="flex items-center gap-1 text-2xl sm:text-3xl font-bold text-indigo-950">
            <span className="">Aamir</span>  <span>😎</span>
           </span>
         </div>
@@ -76,7 +76,7 @@ const Navbar = () => {
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <div className="absolute left-4 top-20 z-50 w-max bg-white px-4 py-4 sm:hidden">
+        <div className="absolute left-4 top-20 z-50 w-max rounded-b-xl border border-indigo-100 bg-white/95 px-4 py-4 shadow-xl backdrop-blur sm:hidden">
           <ul className="flex flex-col gap-4 text-lg">{renderedNavLinks}</ul>
         </div>
       )}

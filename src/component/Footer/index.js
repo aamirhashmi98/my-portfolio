@@ -46,7 +46,7 @@ const Footer = () => {
   ));
 
   return (
-    <footer className="w-full bg-gray-900 text-secondary px-4 sm:px-8 md:px-16 py-8 overflow-x-hidden">
+    <footer className="w-full bg-gradient-to-r from-slate-950 via-indigo-950 to-slate-950 text-indigo-100 px-4 sm:px-8 md:px-16 py-8 overflow-x-hidden">
       {/* Nav Links */}
       <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-6">
         {renderedFooterItems_1}
