@@ -46,7 +46,7 @@ const renderedProjectCard = projects.map((project) => {
 const WorkPage = () => {
   return (
     <>
-      <div className="grid grid-cols-3 gap-10 mx-24 my-16">
+      <div className="grid grid-cols-1 gap-6 mx-4 my-8 md:grid-cols-2 md:gap-8 md:mx-16 md:my-12 xl:grid-cols-3 xl:gap-10 xl:mx-24 xl:my-16">
         {renderedProjectCard}
       </div>
     </>
