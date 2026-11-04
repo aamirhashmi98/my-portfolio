@@ -8,7 +8,7 @@ const footerItems_1 = [
   { label: "About me", path: "/about" },
   { label: "Skills", path: "/skills" },
   { label: "My work", path: "/work" },
-  { label: "Resume", path: "/resume" },
+  { label: "Resume", path: "https://drive.google.com/file/d/1CHkP1PPpFTktdsGl4CtD9u4MGiZ87-xQ/view?usp=drive_link" },
 ];
 
 const footerItems_2 = [
@@ -22,7 +22,7 @@ const Footer = () => {
     <Link key={item.label} href={item.path}>
       <Button
         variant="link"
-        className="text-secondary cursor-pointer text-sm sm:text-base"
+        className="text-indigo-100 cursor-pointer text-sm sm:text-base hover:text-cyan-300"
       >
         {item.label}
       </Button>
@@ -34,10 +34,11 @@ const Footer = () => {
       key={item.label}
       href={item.to}
       target={item.to !== "/contact" ? "_blank" : "_self"}
+      rel={item.to !== "/contact" ? "noopener noreferrer" : undefined}
     >
       <Button
         variant="link"
-        className="text-secondary cursor-pointer text-sm sm:text-base"
+        className="text-indigo-100 cursor-pointer text-sm sm:text-base hover:text-cyan-300"
       >
         {item.label}
       </Button>
@@ -45,7 +46,7 @@ const Footer = () => {
   ));
 
   return (
-    <footer className="w-full bg-gray-900 text-secondary px-4 sm:px-8 md:px-16 py-8 overflow-x-hidden">
+    <footer className="w-full bg-gradient-to-r from-slate-950 via-indigo-950 to-slate-950 text-indigo-100 px-4 sm:px-8 md:px-16 py-8 overflow-x-hidden">
       {/* Nav Links */}
       <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-6">
         {renderedFooterItems_1}

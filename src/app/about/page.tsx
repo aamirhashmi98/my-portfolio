@@ -22,7 +22,7 @@ const About = () => {
       className="max-w-5xl mx-auto px-4 py-6 sm:px-8 md:px-12 lg:px-20 overflow-x-hidden"
     >
       {/* Profile Section */}
-      <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 md:gap-10 items-center sm:items-start md:mt-8 lg:mt-12">
+      <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 md:gap-14 items-center sm:items-center md:mt-8 lg:mt-12">
         {/* Profile Image */}
         <div className="flex justify-center sm:w-1/3">
           <Tilt
@@ -65,7 +65,7 @@ const About = () => {
           {experience.list.map((item, idx) => (
             <Card
               key={idx}
-              className="shadow-2xl md:transition-transform md:duration-300 md:hover:scale-105 w-full"
+              className="w-full border-indigo-100 bg-white/85 shadow-lg shadow-indigo-950/5 backdrop-blur-sm dark:border-slate-700 dark:bg-slate-900/85 md:transition-transform md:duration-300 md:hover:scale-105"
             >
               <CardHeader>
                 <CardTitle className="text-xl sm:text-2xl  text-shadow-md">
@@ -76,7 +76,7 @@ const About = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-sm md:text-[1rem] text-gray-600">
+                <p className="text-sm md:text-[1rem] text-gray-600 dark:text-slate-300">
                   {item.description}
                 </p>
               </CardContent>

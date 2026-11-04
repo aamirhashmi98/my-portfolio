@@ -21,7 +21,7 @@ const renderedProjectCard = projects.map((project) => {
     </span>
   ));
   return (
-    <Card key={id} className="w-full bg-gray-100">
+    <Card key={id} className="w-full border-indigo-100 bg-white/85 shadow-lg shadow-indigo-950/5 backdrop-blur-sm dark:border-slate-700 dark:bg-slate-900/85 transition-transform hover:-translate-y-1">
       <CardHeader className="flex">
         <CardTitle className="text-xl font-semibold text-shadow-md">
           {title}
@@ -46,7 +46,7 @@ const renderedProjectCard = projects.map((project) => {
 const WorkPage = () => {
   return (
     <>
-      <div className="grid grid-cols-3 gap-10 mx-24 my-16">
+      <div className="grid grid-cols-1 gap-6 mx-4 my-8 md:grid-cols-2 md:gap-8 md:mx-16 md:my-12 xl:grid-cols-3 xl:gap-10 xl:mx-24 xl:my-16">
         {renderedProjectCard}
       </div>
     </>

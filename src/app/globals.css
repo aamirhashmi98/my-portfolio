@@ -45,24 +45,24 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --background: #f7f8ff;
+  --foreground: #172554;
+  --card: #ffffff;
+  --card-foreground: #172554;
+  --popover: #ffffff;
+  --popover-foreground: #172554;
+  --primary: #4f46e5;
+  --primary-foreground: #ffffff;
+  --secondary: #e0e7ff;
+  --secondary-foreground: #312e81;
+  --muted: #eef2ff;
+  --muted-foreground: #64748b;
+  --accent: #e0e7ff;
+  --accent-foreground: #312e81;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --border: #dbeafe;
+  --input: #dbeafe;
+  --ring: #818cf8;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -76,11 +76,7 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --gradient-primary: linear-gradient(
-    to top left,
-    oklch(0.145 0 0),
-    oklch(1 0 0)
-  );
+  --gradient-primary: linear-gradient(120deg, #6366f1, #06b6d4);
 }
 
 .dark {
@@ -117,6 +113,10 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+html.dark {
+  color-scheme: dark;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -129,6 +129,17 @@
 body {
   margin: 0;
   padding: 0;
+  background:
+    radial-gradient(circle at 10% 5%, rgb(199 210 254 / 55%), transparent 30rem),
+    radial-gradient(circle at 90% 20%, rgb(165 243 252 / 45%), transparent 28rem),
+    var(--background);
+}
+
+html.dark body {
+  background:
+    radial-gradient(circle at 10% 5%, rgb(67 56 202 / 24%), transparent 30rem),
+    radial-gradient(circle at 90% 20%, rgb(8 145 178 / 18%), transparent 28rem),
+    var(--background);
 }
 
 @keyframes slideDown {
@@ -186,7 +197,7 @@ body {
   width: 10px;
   animation: blink 0.2s step-start infinite;
   font-weight: 900;
-  color: black;
+  color: #4f46e5;
 }
 
 @keyframes blink {

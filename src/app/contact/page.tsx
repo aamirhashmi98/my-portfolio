@@ -9,14 +9,14 @@ import { contactInfo } from "../../data/static";
 const renderedContactInfo = contactInfo.map((contact) => (
   <Card
     key={contact.medium}
-    className={`relative w-full transition-transform duration-300 hover:scale-110 cursor-pointer ${
+    className={`relative w-full border-indigo-100 bg-white/85 shadow-lg shadow-indigo-950/5 backdrop-blur-sm dark:border-slate-700 dark:bg-slate-900/85 transition-transform duration-300 hover:scale-110 cursor-pointer ${
       contact.medium === "phone" ? "animate-slideLeft" : ""
     }
     ${contact.medium === "mail" ? "animate-slideDown" : ""}
     ${contact.medium === "location" ? "animate-slideRight" : ""} `}
   >
     <CardHeader className="flex justify-center">
-      <span className="bg-gray-200 text-3xl md:text-4xl lg:text-5xl xl:text-6xl m-3 p-3 md:m-4 md:p-4 xl:m-6 xl:p-6 absolute -top-10 md:-top-12 lg:-top-14 xl:-top-20 rounded-full xl:text-shadow-md">
+      <span className="bg-gradient-to-br from-indigo-100 to-cyan-100 text-indigo-700 text-3xl md:text-4xl lg:text-5xl xl:text-6xl m-3 p-3 md:m-4 md:p-4 xl:m-6 xl:p-6 absolute -top-10 md:-top-12 lg:-top-14 xl:-top-20 rounded-full shadow-md dark:from-indigo-950 dark:to-cyan-950 dark:text-cyan-300 xl:text-shadow-md">
         {contact.icon}
       </span>
     </CardHeader>

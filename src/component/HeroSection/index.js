@@ -68,25 +68,25 @@ const TypewriterWithBold = ({
 
 const HeroSection = () => {
   return (
-   <section className="min-h-[calc(100vh-80px)] w-full flex justify-center items-center px-4 sm:px-8">
+   <section className="min-h-[calc(100vh-80px)] w-full flex justify-center items-center px-1 sm:px-8">
   <div className="flex flex-col items-center text-center">
     {/* Headings */}
     <div>
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl animate-slideDown font-light">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl animate-slideDown font-light text-slate-900 dark:text-slate-100">
         Welcome to my <span className="highlight font-semibold">Portfolio</span>
       </h1>
 
-      <h2 className="font-light text-2xl sm:text-3xl md:text-4xl mt-1 sm:mt-6">
+      <h2 className="font-light text-2xl sm:text-3xl md:text-4xl mt-1 sm:mt-6 text-slate-700 dark:text-slate-300">
         Hi, I am <span className="font-semibold">Aamir Hashmi</span>
       </h2>
 
-      <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mt-2 sm:mt-6">
+      <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mt-2 sm:mt-6 text-indigo-600 dark:text-cyan-300">
         Frontend Developer
       </h3>
     </div>
 
     {/* Typewriter Text */}
-    <div className="flex justify-center max-w-4xl w-full mt-2 sm:mt-8 text-base sm:text-lg md:text-xl min-h-[265px] md:min-h-[170px]">
+    <div className="flex justify-center max-w-4xl w-full mt-2 px-0 sm:mt-8 text-base sm:text-lg md:text-xl min-h-[265px] md:min-h-[170px]">
       <TypewriterWithBold
         text={text}
         boldWords={[
@@ -109,7 +109,7 @@ const HeroSection = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span className="inline-flex items-center text-sm text-white bg-black md:text-lg px-5 py-3 rounded-sm cursor-pointer transition-transform duration-300 hover:bg-gray-800 drop-shadow-[0_10px_20px_rgba(0,0,0,0.9)]">
+        <span className="inline-flex items-center text-sm text-white bg-gradient-to-r from-indigo-600 to-cyan-600 md:text-lg px-5 py-3 rounded-md cursor-pointer transition-all duration-300 hover:from-indigo-700 hover:to-cyan-700 hover:-translate-y-0.5 shadow-lg shadow-indigo-500/30">
           Download Resume <FiDownload className="md:text-xl ml-2" />
         </span>
       </Link>
