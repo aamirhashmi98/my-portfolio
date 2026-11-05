@@ -33,7 +33,9 @@ const Navbar = () => {
     document.documentElement.classList.toggle("dark", nextTheme === "dark");
   };
   const renderedNavLinks = navLinks.map((link) => {
-    const isActive = pathname === link.href;
+    const isActive =
+      pathname === link.href ||
+      (link.href !== "/" && pathname.startsWith(`${link.href}/`));
     return (
       <div key={link.label} className="transition-colors hover:text-indigo-600">
         <Link
