@@ -3,9 +3,8 @@
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
+  CardDescription,
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
@@ -68,10 +67,15 @@ const About = () => {
               className="w-full border-indigo-100 bg-white/85 shadow-lg shadow-indigo-950/5 backdrop-blur-sm dark:border-slate-700 dark:bg-slate-900/85 md:transition-transform md:duration-300 md:hover:scale-105"
             >
               <CardHeader>
-                <CardTitle className="text-xl sm:text-2xl  text-shadow-md">
-                  {item.company}
-                </CardTitle>
-                <CardDescription className="text-base text-gray-500  text-shadow-md">
+                <div className="flex items-start justify-between gap-3">
+                  <CardTitle className="min-w-0 text-xl text-gray-500 text-shadow-md sm:text-2xl">
+                    {item.company}
+                  </CardTitle>
+                  <p className="shrink-0 pt-1 text-right text-xs text-gray-500 sm:text-sm">
+                    {item.duration}
+                  </p>
+                </div>
+                <CardDescription className="text-sm text-gray-600 text-shadow-md">
                   {item.designation}
                 </CardDescription>
               </CardHeader>
@@ -80,11 +84,6 @@ const About = () => {
                   {item.description}
                 </p>
               </CardContent>
-              <CardFooter>
-                <p className="text-sm text-gray-500 text-shadow-s">
-                  {item.duration}
-                </p>
-              </CardFooter>
             </Card>
           ))}
         </div>

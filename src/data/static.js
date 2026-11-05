@@ -18,7 +18,7 @@ export const profile = {
         duration: "Jun, 2022 - Dec, 2024",
       },
       {
-        company: "Elymer",
+        company: "Elymer International",
         designation: "Junior Software Engineer",
         description: `Implemented quality control processes for PCB manufacturing to ensure precision and efficiency. Analyzed test data and collaborated with engineering teams to resolve defects. Maintained documentation of test reports and quality assessments`,
         duration: "Apr, 2021 - Jun, 2022",
