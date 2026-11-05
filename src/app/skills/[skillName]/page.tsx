@@ -18,17 +18,19 @@ export default async function skillDetail({
   );
   const renderedSkillDetail = matchingItem.map((card) => (
     <article key={card.id} className="">
-      <Card className="flex-1 bg-gray-200 m-12">
-        <CardHeader className="">
-          <span className="flex justify-center text-4xl">{card.icon}</span>
-          <span className=" flex justify-center text-lg font-semibold">
+      <Card className="m-12 flex-1 border-indigo-100 bg-white/85 text-slate-900 shadow-lg shadow-indigo-950/5 backdrop-blur-sm dark:border-slate-700 dark:bg-slate-900/85 dark:text-slate-100">
+        <CardHeader>
+          <span className="flex justify-center text-4xl text-indigo-600 dark:text-cyan-300">
+            {card.icon}
+          </span>
+          <span className="flex justify-center text-lg font-semibold text-slate-900 dark:text-slate-100">
             {card.name}
           </span>
         </CardHeader>
-        <CardContent className="flex justify-center text-center text-sm text-gray-500 md:text-lg">
+        <CardContent className="flex justify-center text-center text-sm text-gray-600 dark:text-slate-300 md:text-lg">
           {card.description}
         </CardContent>
-        <CardFooter className=" flex justify-center">
+        <CardFooter className="flex justify-center text-slate-600 dark:text-slate-300">
           ratings my self - {card.ratings}
         </CardFooter>
       </Card>
