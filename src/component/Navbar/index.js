@@ -58,7 +58,7 @@ const Navbar = () => {
   return (
     <div className="relative">
       {/* Main Navbar */}
-      <nav className="flex items-center justify-between w-full h-20 px-4 sm:px-12 border-b border-indigo-100 bg-white/80 shadow-sm backdrop-blur-md overflow-x-hidden dark:border-slate-700 dark:bg-slate-950/85">
+      <nav className="flex items-center justify-between w-full h-18 px-4 sm:px-12 border-b border-indigo-100 bg-white/80 shadow-sm backdrop-blur-md overflow-x-hidden dark:border-slate-700 dark:bg-slate-950/85">
         {/* Left - Mobile Menu Icon */}
         <div className="flex items-center sm:hidden">
           <Button
@@ -96,7 +96,7 @@ const Navbar = () => {
             onClick={toggleTheme}
             aria-label={theme === "dark" ? "Enable light mode" : "Enable dark mode"}
             aria-pressed={theme === "dark"}
-            className="rounded-full text-indigo-950 hover:bg-indigo-100 hover:text-indigo-700 dark:text-indigo-100 dark:hover:bg-slate-800 dark:hover:text-cyan-300"
+            className="rounded-full text-indigo-950 hover:bg-indigo-100 hover:cursor-pointer hover:text-indigo-700 dark:text-indigo-100 dark:hover:bg-slate-800 dark:hover:text-cyan-300"
           >
             {theme === "dark" ? <FiSun /> : <FiMoon />}
           </Button>

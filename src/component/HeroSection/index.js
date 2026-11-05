@@ -98,7 +98,7 @@ const HeroSection = () => {
           "Next.js",
           "OpenAI",
         ]}
-        speed={40}
+        speed={50}
       />
     </div>
 
