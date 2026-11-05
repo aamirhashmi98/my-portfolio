@@ -68,22 +68,14 @@ const About = () => {
             >
               <CardHeader>
                 <div className="flex items-start justify-between gap-3">
-                  <CardTitle
-                    className={`min-w-0 text-xl text-shadow-md sm:text-2xl ${
-                      item.company === "Magic EdTech"
-                        ? "text-indigo-600"
-                        : item.company === "Elymer International"
-                          ? "text-gray-500"
-                          : ""
-                    }`}
-                  >
+                  <CardTitle className="min-w-0 text-xl text-gray-500 text-shadow-md sm:text-2xl">
                     {item.company}
                   </CardTitle>
                   <p className="shrink-0 pt-1 text-right text-xs text-gray-500 sm:text-sm">
                     {item.duration}
                   </p>
                 </div>
-                <CardDescription className="text-base text-gray-500 text-shadow-md">
+                <CardDescription className="text-sm text-gray-600 text-shadow-md">
                   {item.designation}
                 </CardDescription>
               </CardHeader>
